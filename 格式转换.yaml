@@ -7,12 +7,12 @@ http:
     - format-api.netpock.com
   script:
     - match: http:\/\/format-api\.netpock\.com\/api\/user_info
-      name: gszh_8
+      name: 转换-EAE
       type: response
       require-body: true
       max-size: -1
       timeout: 60
 script-providers:
-  gszh_8:
+  转换-EAE:
     url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/gszh.js
     interval: 86400
