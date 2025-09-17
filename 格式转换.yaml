@@ -1,6 +1,6 @@
 name: 格式转换
 desc: 格式转换
-category: 工具
+category: 订阅工具
 icon: https://clashios.app/static/icon-120x120.png
 http:
   mitm:
