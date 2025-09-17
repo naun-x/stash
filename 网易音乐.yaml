@@ -27,54 +27,54 @@ http:
   script:
     # mian | 热推、有话想说、分享一下、歌曲下的祝福等小提示去除 ｜ 评论区 乐迷、星评等级 关注 等 图标去除
     - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get)
-      name: ne_mian_40
+      name: 网易-EAE
       type: response
       require-body: true
       binary-mode: true
       timeout: 20
       # tab
     - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab
-      name: ne_mian_40
+      name: 网易-EAE
       type: response
       require-body: true
       binary-mode: true
       timeout: 20
       # 推荐 | home | 主页
     - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh))
-      name: ne_mian_40
+      name: 网易-EAE
       type: response
       require-body: true
       binary-mode: true
       timeout: 20
       # 发现
     - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show
-      name: ne_mian_40
+      name: 网易-EAE
       type: response
       require-body: true
       binary-mode: true
       timeout: 20
       # effect
     - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d
-      name: ne_mian_40
+      name: 网易-EAE
       type: response
       require-body: true
       binary-mode: true
       timeout: 20
       # 我的 MyPageBar ad
     - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/position\/show\/resource
-      name: ne_mian_40
+      name: 网易-EAE
       type: response
       require-body: true
       binary-mode: true
       timeout: 20
       # 显示未关注你
     - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get
-      name: ne_mian_40
+      name: 网易-EAE
       type: response
       require-body: true
       binary-mode: true
       timeout: 20
 script-providers:
-  ne_mian_40:
+  网易-EAE:
     url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js
     interval: 86400
