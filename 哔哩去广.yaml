@@ -16,12 +16,12 @@ http:
     - "-*tracker*.biliapi.net"
   script:
     - match: ^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$
-      name: 哔哩-EZE
+      name: 哔哩-EAE
       type: response
       require-body: true
       timeout: 10
     - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?
-      name: 哔哩-EXE
+      name: 哔哩-EBE
       type: response
       require-body: true
       timeout: 10
@@ -31,62 +31,62 @@ http:
       require-body: true
       timeout: 10
     - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?
-      name: 哔哩-EVE
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?
-      name: 哔哩-EBE
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https://app.bilibili.com/x/v2/search/square
-      name: 哔哩-ENE
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index
-      name: 哔哩-EAE
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi
-      name: 哔哩-ESE
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom
       name: 哔哩-EDE
       type: response
       require-body: true
       timeout: 10
-    - match: ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\?
+    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?
+      name: 哔哩-EEE
+      type: response
+      require-body: true
+      timeout: 10
+    - match: ^https://app.bilibili.com/x/v2/search/square
       name: 哔哩-EFE
       type: response
       require-body: true
       timeout: 10
-    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab
+    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index
       name: 哔哩-EGE
       type: response
       require-body: true
       timeout: 10
-    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine
+    - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi
       name: 哔哩-EHE
       type: response
       require-body: true
       timeout: 10
-    - match: ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$
+    - match: ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom
+      name: 哔哩-EIE
+      type: response
+      require-body: true
+      timeout: 10
+    - match: ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\?
       name: 哔哩-EJE
       type: response
       require-body: true
       timeout: 10
-    - match: ^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$
+    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab
       name: 哔哩-EKE
       type: response
       require-body: true
       timeout: 10
-    - match: ^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$
+    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine
       name: 哔哩-ELE
+      type: response
+      require-body: true
+      timeout: 10
+    - match: ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$
+      name: 哔哩-ENE
+      type: response
+      require-body: true
+      timeout: 10
+    - match: ^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$
+      name: 哔哩-EOE
+      type: response
+      require-body: true
+      timeout: 10
+    - match: ^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$
+      name: 哔哩-EPE
       type: response
       require-body: true
       timeout: 10
@@ -103,31 +103,19 @@ http:
     - ^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - reject-dict
     - ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - reject-dict
 script-providers:
-  哔哩-EZE:
+  哔哩-EAE:
     url: https://github.com/deezertidal/private/raw/master/js-backup/Rewrite/Function/Bilibili_CC.conf
     interval: 86400
-  哔哩-EXE:
+  哔哩-EBE:
     url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
     interval: 86400
   哔哩-ECE:
     url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
     interval: 86400
-  哔哩-EVE:
-    url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-    interval: 86400
-  哔哩-EBE:
-    url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-    interval: 86400
-  哔哩-ENE:
-    url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-    interval: 86400
-  哔哩-EAE:
-    url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-    interval: 86400
-  哔哩-ESE:
-    url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-    interval: 86400
   哔哩-EDE:
+    url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
+    interval: 86400
+  哔哩-EEE:
     url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
     interval: 86400
   哔哩-EFE:
@@ -139,12 +127,24 @@ script-providers:
   哔哩-EHE:
     url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
     interval: 86400
+  哔哩-EIE:
+    url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
+    interval: 86400
   哔哩-EJE:
-    url: https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
+    url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
     interval: 86400
   哔哩-EKE:
-    url: https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_dynamic.js
+    url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
     interval: 86400
   哔哩-ELE:
+    url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
+    interval: 86400
+  哔哩-ENE:
+    url: https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
+    interval: 86400
+  哔哩-EOE:
+    url: https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_dynamic.js
+    interval: 86400
+  哔哩-EPE:
     url: https://github.com/deezertidal/private/raw/master/js-backup/Rewrite/Function/Bilibili_CC.conf
     interval: 86400
