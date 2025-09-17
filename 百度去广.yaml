@@ -1,0 +1,18 @@
+name: 百度去广告
+desc: 百度广告拦截
+category: 广告拦截
+icon: https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Baidu.png
+date: "2024-07-26 21:19:28"
+http:
+  mitm:
+    - m.baidu.com
+    - www.baidu.com
+  script:
+    - match: ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9})
+      name: 移除百度搜索首页信息流广告_9
+      type: response
+      require-body: true
+script-providers:
+  移除百度搜索首页信息流广告_9:
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/BaiduSearch/BaiduSearchHomePage_remove_ads.js
+    interval: 86400
