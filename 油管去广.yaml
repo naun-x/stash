@@ -1,7 +1,7 @@
 name: 油管去广告
 desc: 油管广告拦截
 category: 广告拦截
-icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+icon: https://rx.nzvrn.com/x/IMG_0461.png
 http:
   mitm:
     - "-redirector*.googlevideo.com"
