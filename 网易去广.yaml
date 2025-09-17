@@ -1,6 +1,6 @@
 name: 网易去广告
 desc: 网易广告拦截
-category: 广告拦截
+category: 广告拦截1
 icon: https://rx.nzvrn.com/x/netease cloudmusic
 rules:
   - DOMAIN,httpdns.music.163.com,REJECT
