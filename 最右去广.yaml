@@ -1,7 +1,7 @@
 name: 最右去广告
 desc: 最右广告拦截
 category: 广告拦截
-icon: https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/ZuiYou.png
+icon: https://rx.nzvrn.com/x/zuiyou
 rules:
   # 字节跳动
   - DOMAIN,toblog.ctobsnssdk.com,REJECT
