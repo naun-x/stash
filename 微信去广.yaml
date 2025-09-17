@@ -1,7 +1,7 @@
 name: 微信去广告
 desc: 微信广告拦截
 category: 广告拦截
-icon: https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Weixin.png
+icon: https://rx.nzvrn.com/x/weixin
 rules:
   - DOMAIN,wxsnsdy.wxs.qq.com,REJECT
   - DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
