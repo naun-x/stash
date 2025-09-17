@@ -1,7 +1,7 @@
 name: 格式转换
 desc: 格式转换
 category: 订阅工具
-icon: https://clashios.app/static/icon-120x120.png
+icon: https://rx.nzvrn.com/x/sub-store
 http:
   mitm:
     - format-api.netpock.com
