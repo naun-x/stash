@@ -26,15 +26,15 @@ rules:
   - DOMAIN,adapi.izuiyou.com,REJECT
 http:
   mitm:
-    - api.izuiyou.com
-    - gromore.pangolin-sdk-toutiao.com
-    - lf-cdn-tos.bytescm.com
-    - zyfile.izuiyou.com
-    - 203.107.1.1
-    - 203.107.1.33
-    - 203.107.1.66
-    - 203.107.1.67
-    - 203.107.1.97
+    - 'api.izuiyou.com'
+    - 'gromore.pangolin-sdk-toutiao.com'
+    - 'lf-cdn-tos.bytescm.com'
+    - 'zyfile.izuiyou.com'
+    - '203.107.1.1'
+    - '203.107.1.33'
+    - '203.107.1.66'
+    - '203.107.1.67'
+    - '203.107.1.97'
   url-rewrite:
     - ^http:\/\/mercury-gateway\.ixiaochuan\.cn\/mercury\/v1\/ad\/ - reject-dict
     - ^http:\/\/file-share\.izuiyou\.com\/octopus\/media\/templates\/search_home_page_(nv|nv_v2)\/search_home_page_nv - reject
