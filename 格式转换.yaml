@@ -1,7 +1,7 @@
 name: 格式转换
 desc: 格式转换
-icon: https://clashios.app/static/icon-120x120.png
 category: 工具
+icon: https://clashios.app/static/icon-120x120.png
 http:
   mitm:
     - format-api.netpock.com
