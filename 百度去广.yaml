@@ -1,7 +1,7 @@
 name: 百度去广告
 desc: 百度广告拦截
 category: 广告拦截
-icon: https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Baidu.png
+icon: https://rx.nzvrn.com/x/IMG_0459.png
 date: "2024-07-26 21:19:28"
 http:
   mitm:
