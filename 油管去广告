@@ -1,7 +1,7 @@
-icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 name: 油管去广告
 desc: 可后台播放
-category: ADS
+category: 广告拦截
+icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 http:
   mitm:
     - "-redirector*.googlevideo.com"
@@ -23,6 +23,6 @@ http:
     - ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject-200
     - ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject-200
 script-providers:
-  YouTubequguanggao1:
+  油管去广告:
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
     interval: 86400
