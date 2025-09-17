@@ -1,7 +1,7 @@
 name: 哔哩去广告
 desc: 哔哩广告拦截
 category: 广告拦截
-icon: https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Bilibili.png
+icon: https://rx.nzvrn.com/x/bilibili
 http:
   mitm:
     - app.bilibili.com
