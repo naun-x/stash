@@ -4,16 +4,16 @@ category: 广告拦截
 icon: https://rx.nzvrn.com/x/bilibili
 http:
   mitm:
-    - "app.bilibili.com"
-    - "api.live.bilibili.com"
-    - "api.vc.bilibili.com"
-    - "api.bilibili.com"
-    - "manga.bilibili.com"
-    - "grpc.biliapi.net"
-    - "api.biliapi.net"
-    - "-broadcast.chat.bilibili.com"
-    - "-*cdn*.biliapi.net"
-    - "-*tracker*.biliapi.net"
+    - 'app.bilibili.com'
+    - 'api.live.bilibili.com'
+    - 'api.vc.bilibili.com'
+    - 'api.bilibili.com'
+    - 'manga.bilibili.com'
+    - 'grpc.biliapi.net'
+    - 'api.biliapi.net'
+    - '-broadcast.chat.bilibili.com'
+    - '-*cdn*.biliapi.net'
+    - '-*tracker*.biliapi.net'
   script:
     - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?
       name: 哔哩-EAE
