@@ -2,17 +2,16 @@ name: 百度去广告
 desc: 百度广告拦截
 category: 广告拦截
 icon: https://rx.nzvrn.com/x/baidu
-date: "2024-07-26 21:19:28"
 http:
   mitm:
     - m.baidu.com
     - www.baidu.com
   script:
     - match: ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9})
-      name: 移除百度搜索首页信息流广告_9
+      name: 百度-EAE
       type: response
       require-body: true
 script-providers:
-  移除百度搜索首页信息流广告_9:
+  百度-EAE:
     url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/BaiduSearch/BaiduSearchHomePage_remove_ads.js
     interval: 86400
