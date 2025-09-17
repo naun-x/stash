@@ -11,7 +11,7 @@ http:
     - "youtubei.googleapis.com"
   script:
     - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)
-      name: 油管广告拦截
+      name: 油管-EAE
       type: response
       require-body: true
       binary-mode: true
@@ -23,6 +23,6 @@ http:
     - ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject-200
     - ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject-200
 script-providers:
-  油管广告拦截:
+  油管-EAE:
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
     interval: 86400
