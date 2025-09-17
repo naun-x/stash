@@ -4,7 +4,7 @@ category: 订阅工具
 icon: https://rx.nzvrn.com/x/sub-store
 http:
   mitm:
-    - format-api.netpock.com
+    - 'format-api.netpock.com'
   script:
     - match: http:\/\/format-api\.netpock\.com\/api\/user_info
       name: 转换-EAE
