@@ -2,9 +2,6 @@ name: BoxJs
 desc: http://boxjs.com
 category: BoxJs
 openUrl: http://boxjs.com
-author: ChavyLeung
-homepage: https://docs.boxjs.app/
-manual: https://docs.boxjs.app/
 icon: https://rx.nzvrn.com/x/boxjs
 http:
   force-http-engine:
