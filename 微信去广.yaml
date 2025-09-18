@@ -105,6 +105,8 @@ http:
     - 'wx.10086.cn'
     - 'ne.gdsz.sinopec.com'
     - 'mp.weixin.qq.com'
+    - 'weixin110.qq.com'
+    - 'security.wechat.com'
   url-rewrite:
     - ^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ - reject-dict
     - ^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach - reject
@@ -278,6 +280,10 @@ http:
       name: 微信-EOE
       type: response
       require-body: true
+    - match: ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?
+      name: 外链-EAE
+      type: response
+      require-body: true
 script-providers:
   微信-EAE:
     url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js
@@ -314,4 +320,7 @@ script-providers:
     interval: 86400
   微信-EOE:
     url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ming/ming.js
+    interval: 86400
+  外链-EAE:
+    url: https://kelee.one/Resource/JavaScript/Weixin/Weixin_external_links_unlock.js
     interval: 86400
