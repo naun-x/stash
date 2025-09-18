@@ -4,27 +4,117 @@ category: 广告拦截
 icon: https://rx.nzvrn.com/x/weixin
 rules:
   - DOMAIN,wxsnsdy.wxs.qq.com,REJECT
-  - DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
-  - DOMAIN,wxsnsdy.wxs.qq.com,REJECT
   - DOMAIN,wxsmsdy.video.qq.com,REJECT
   - DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
   - DOMAIN,ads-shopping.shouqianba.com,REJECT
   - DOMAIN,ad.maoyan.com,REJECT
+  - DOMAIN,e.jparking.cn,REJECT
 http:
   mitm:
-    - 'mp.weixin.qq.com'
-    - '*.wxs.qq.com'
+    - '3pp.starbucks.com.cn'
+    - 'aag.enmonster.com'
+    - 'activity.yonghuivip.com'
+    - 'ad.maoyan.com'
+    - 'ad.xiaotucc.com'
+    - 'ads.ishansong.com'
+    - 'alittle-tea.oss-cn-shanghai.aliyuncs.com'
+    - 'api-fouth-mem.huazhu.com'
+    - 'api-marketing.zhinengxiyifang.cn'
+    - 'api.hellobike.com'
+    - 'api.hengdianfilm.com'
+    - 'api.hongyibo.com.cn'
+    - 'api.kuaidihelp.com'
+    - 'api.maoyan.com'
+    - 'api.mcd.cn'
+    - 'api.pinduoduo.com'
+    - 'api.prod.dj.mstand.cn'
+    - 'api.songguo7.com'
+    - 'api.yonghuivip.com'
+    - 'apiproxy.zuche.com'
+    - 'apis.alenable.com'
+    - 'app.95504.net'
+    - 'app.homeinns.com'
+    - 'applets.jtexpress.com.cn'
+    - 'appuser-static.huolala.cn'
+    - 'as.xiaojukeji.com'
+    - 'capis*.didapinche.com'
+    - 'cappapi.alittle-tea.com'
+    - 'cbd-gateway-service-applets.hualala.com'
+    - 'ccmsupport-sz.tenpay.com'
+    - 'coco-com.e.verystar.net'
+    - 'creditcardapp.bankcomm.com'
+    - 'customer-app.sto.cn'
+    - 'daijia.kuaidadi.com'
+    - 'dock.tenchii.com'
+    - 'dsp.fcbox.com'
+    - 'file.dian.so'
+    - 'flow.dmall.com'
+    - 'fscdn.zto.com'
+    - 'gw-passenger-wap.01zhuanche.com'
+    - 'hdgateway.zto.com'
+    - 'htwkop.xiaojukeji.com'
+    - 'images.qmai.cn'
+    - 'lawsonapi.yorentown.com'
+    - 'm.ctrip.com'
+    - 'mapi.xiaotucc.com'
+    - 'mbmodule-openapi.paas.cmbchina.com'
+    - 'member.lxjchina.com.cn'
+    - 'miniapp.sexytea2013.com'
+    - 'minicap.caocaokeji.cn'
+    - 'minifm.maxxipoint.com'
+    - 'minipro.95504.net'
+    - 'miniprogram.ishansong.com'
+    - 'mkt-gateway.tuhu.cn'
+    - 'mobile-api.imlaidian.com'
+    - 'mxsa.mxbc.net'
+    - 'newton.gumingnc.com'
+    - 'passenger.t3go.cn'
+    - 'passengerapi.saicmobility.com'
+    - 'plt.yorentown.com'
+    - 'qapi.huolala.cn'
+    - 'r2.gzyct.com'
+    - 'res.hongyibo.com.cn'
+    - 'res.pizzahut.com.cn'
+    - 's.jiediankeji.com'
+    - 'saas-ad.cloudpnr.com'
+    - 'sauron-report.yonghuivip.com'
+    - 'smarket.dian.so'
+    - 'sto-customer-app.oss-cn-shanghai.aliyuncs.com'
+    - 'supplier-api.imdada.cn'
+    - 'suyun-guest.daojia.com'
+    - 'tbgapplet.carlsberg.asia'
+    - 'tm-api.pin-dao.cn'
+    - 'ucmp.sf-express.com'
+    - 'ump.ems.com.cn'
+    - 'vod-movie.maoyan.com'
+    - 'webapi.qmai.cn'
+    - 'webchatapp.fcbox.com'
+    - 'wechat-api.i-xiaoma.com.cn'
+    - 'www.deppon.com'
+    - 'wx.bthhotels.com'
+    - 'wx.maoyan.com'
+    - 'wxapp.bestwehotel.com'
+    - 'wxproj.seeyouyima.com'
+    - 'wxs-weixin.sd.zhumanggroup.com'
+    - 'mcsp.cloudpnr.com'
+    - 'api.szbgcx.cn'
+    - 'rms.meituan.com'
+    - 'chong.qq.com'
+    - 'wx.online-cmcc.cn'
+    - 'wx.10086.cn'
+    - 'ne.gdsz.sinopec.com'
   url-rewrite:
-    - ^http:\/\/[\d\.]+(:49155)?\/finderpdd\.video\.qq\.com\/\d+\/\d+\/stodownload\? - reject-dict
-    - ^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ - reject-dict
-    - ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? - reject-dict
     - ^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ - reject-dict
     - ^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach - reject
     - ^https:\/\/images\.qmai\.cn\/s214925\/2023 - reject-dict
     - ^https:\/\/creditcardapp\.bankcomm\.com\/cnsvPmpaMdbcardWeb\/page\/getGuidePageAds - reject
     - ^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic - reject
-    - ^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage - reject
-    - ^https:\/\/dsp\.fcbox\.com - reject
+    - ^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage\/modulesAggregated\? - reject-dict
+    - ^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage\/getHomeLiveInfo$ - reject-dict
+    - ^https:\/\/dsp\.fcbox\.com\/adSearch\/ - reject-dict
+    - ^https:\/\/webchatapp\.fcbox\.com\/post\/suggestion\/query$ - reject-dict
+    - ^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/marketingEntrance\/v2\/infoWithItems$ - reject-dict
+    - ^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/marketingEntrance\/info$ - reject-dict
     - ^https:\/\/app\.95504\.net\/app\/json\/page_ad\/initPageAd\?ver= - reject
     - ^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getPopAdData - reject
     - ^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getIndexAdData - reject
@@ -51,6 +141,7 @@ http:
     - ^https:\/\/api\.kuaidihelp\.com\/g_order_core\/v2\/mina\/User\/getBannerList - reject-dict
     - ^https:\/\/wxproj\.seeyouyima\.com\/data\/today_tips - reject-dict
     - ^https:\/\/suyun-guest\.daojia\.com\/api\/kuaigou\/banjia\/review - reject-dict
+    - ^https:\/\/ne\.gdsz\.sinopec\.com\/gateway\/api\/omp\/mt\/appAdvertising - reject-dict
     - ^https:\/\/qapi\.huolala\.cn\/ads - reject-dict
     - ^https:\/\/qapi\.huolala\.cn\/home_new_user - reject-dict
     - ^https:\/\/qapi\.huolala\.cn\/get_service_list - reject-dict
@@ -115,8 +206,108 @@ http:
     - ^https:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/4\?cid= - reject-dict
     - ^https:\/\/tbgapplet\.carlsberg\.asia\/tuborg\/banner\/(loading|index) - reject-dict
     - ^https:\/\/api\.pinduoduo\.com\/api\/ktt_gateway\/activity\/feeds\/personal_home_page\/ - reject
-    - ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/integralPlanet\/getCxAdvertiseList - reject-dict
-    - ^https:\/\/ucmp-static\.sf-express\.com\/proxy\/wxbase\/wxTicket\/wxLiveStreamInfo\?pageNo - reject-dict
     - ^https:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query - reject-dict
-    - ^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/member(Goods\/pointMallService\/goodsList|Manage\/memberEquity\/queryRecommendEquity|ActLengthy\/fullGiveActivityService\/fullGiveInfo) - reject-dict
-    - ^https:\/\/ucmp\.sf-express\.com\/cx-wechat-query\/query\/info-flow\/reconsitution-list - reject
+    - ^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList - reject-dict
+    - ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/conf\?ns=daijia-front&name= - reject-dict
+    - ^https:\/\/daijia\.kuaidadi\.com\/gateway\?api=prado\.cms\.delivery\.batch&apiVe - reject-dict
+    - ^https:\/\/api\.szbgcx\.cn\/account\/adv\/ - reject
+    - ^https:\/\/wx\.online-cmcc\.cn\/contactpoint\/customer\/api\/list\? - reject-dict
+    - ^https:\/\/wx\.10086\.cn\/qwhdhub\/activity\/info - reject-dict
+  body-rewrite:
+    - ^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$ response-jq delpaths([["data"]])
+    - ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ response-jq delpaths([["data",0]])
+    - ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ response-jq delpaths([["data",1]])
+    - ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ response-jq delpaths([["data",2]])
+    - ^https:\/\/rms\.meituan\.com\/api\/v1\/rmsmina\/c\/queryShopPortalInfo\? response-jq delpaths([["data","popUpWindows"]])
+    - ^https:\/\/chong\.qq\.com\/tws\/wxmobile\/GetProduct4App\? response-jq del(.respInfo.reserveProductList) | .respInfo.shortcut |= map(select(.name != "充流量" and .name != "领话费券"))
+    - ^https:\/\/chong\.qq\.com\/tws\/wxmobile4app\/GetSecondProduct\? response-jq del(.respInfo.productList) | .respInfo.shortcut |= map(select(.name != "充流量" and .name != "领话费券"))
+    - ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? response-jq delpaths([["data","request","number","markSeat","servicehallOperList"]])
+    - ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? response-jq delpaths([["data","request","number","servicehallOperList"]])
+    - ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? response-jq delpaths([["data","request","number","markSeat","servicehallFuncList"]])
+    - ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? response-jq delpaths([["data","request","number","servicehallFuncList"]])
+  script:
+    - match: ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config
+      name: 微信-EAE
+      type: response
+      require-body: true
+    - match: ^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel
+      name: 微信-EBE
+      type: response
+      require-body: true
+    - match: ^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity)
+      name: 微信-ECE
+      type: response
+      require-body: true
+    - match: ^https:\/\/minifm\.maxxipoint\.com\/banner\/list
+      name: 微信-EDE
+      type: response
+      require-body: true
+    - match: ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/home
+      name: 微信-EEE
+      type: response
+      require-body: true
+    - match: ^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER
+      name: 微信-EFE
+      type: response
+      require-body: true
+    - match: ^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info
+      name: 微信-EGE
+      type: response
+      require-body: true
+    - match: ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.homeConfig
+      name: 微信-EHE
+      type: response
+      require-body: true
+    - match: ^https:\/\/cappapi\.alittle-tea\.com\/open\?method=catering\.set\.ad
+      name: 微信-ELE
+      type: response
+      require-body: true
+    - match: ^https:\/\/api\.prod\.dj\.mstand\.cn\/scrm\/mini\/app\/index\/info
+      name: 微信-EJE
+      type: response
+      require-body: true
+    - match: ^https:\/\/passenger\.t3go\.cn\/(solution\-|common\-)?(passenger\-)?(activity\-|app\-)?api\/notoken\/(trip\/)?api\/(home\/|common\/)?(v[1-3]\/)?(ad\/getNegativescreen|solution\/passenger\/open\/getHomeMenu|leftmenu|getHomeInfoGlobal)
+      name: 微信-EKE
+      type: response
+      require-body: true
+    - match: ^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front)
+      name: 微信-EOE
+      type: response
+      require-body: true
+script-providers:
+  微信-EAE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js
+    interval: 86400
+  微信-EBE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js
+    interval: 86400
+  微信-ECE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/xiaotucc/xiaotucc.js
+    interval: 86400
+  微信-EDE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js
+    interval: 86400
+  微信-EEE":
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js
+    interval: 86400
+  微信-EFE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js
+    interval: 86400
+  微信-EGE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js
+    interval: 86400
+  微信-EHE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js
+    interval: 86400
+  微信-ELE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/alittle-tea/alittle-tea.js
+    interval: 86400
+  微信-EJE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/M_Stand/M_Stand.js
+    interval: 86400
+  微信-EKE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/T3/T3.js
+    interval: 86400
+  微信-EOE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ming/ming.js
+    interval: 86400
