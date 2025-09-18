@@ -9,6 +9,7 @@ rules:
   - DOMAIN,ads-shopping.shouqianba.com,REJECT
   - DOMAIN,ad.maoyan.com,REJECT
   - DOMAIN,e.jparking.cn,REJECT
+  - DOMAIN-SUFFIX,wxs.qq.com,REJECT
 http:
   mitm:
     - '3pp.starbucks.com.cn'
@@ -103,6 +104,7 @@ http:
     - 'wx.online-cmcc.cn'
     - 'wx.10086.cn'
     - 'ne.gdsz.sinopec.com'
+    - 'mp.weixin.qq.com'
   url-rewrite:
     - ^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ - reject-dict
     - ^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach - reject
@@ -213,6 +215,8 @@ http:
     - ^https:\/\/api\.szbgcx\.cn\/account\/adv\/ - reject
     - ^https:\/\/wx\.online-cmcc\.cn\/contactpoint\/customer\/api\/list\? - reject-dict
     - ^https:\/\/wx\.10086\.cn\/qwhdhub\/activity\/info - reject-dict
+    - ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? - reject-dict
+    - ^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword - reject-dict
   body-rewrite:
     - ^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$ response-jq delpaths([["data"]])
     - ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ response-jq delpaths([["data",0]])
