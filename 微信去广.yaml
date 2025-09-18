@@ -297,7 +297,7 @@ script-providers:
   微信-EDE:
     url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js
     interval: 86400
-  微信-EEE":
+  微信-EEE:
     url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js
     interval: 86400
   微信-EFE:
