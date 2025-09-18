@@ -7,7 +7,7 @@ http:
     - m.baidu.com
     - www.baidu.com
   script:
-    - match: ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9})
+    - match: ^https?:\/\/(www|m)\.baidu\.com(/$|\/\?ref.*)
       name: 百度-EAE
       type: response
       require-body: true
