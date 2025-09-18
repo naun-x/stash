@@ -1,3 +1,7 @@
+name: 订阅管理
+desc: 订阅管理
+category: 订阅管理
+icon: https://rx.nzvrn.com/x/sub-store
 http:
   mitm:
     - 'sub.store'
