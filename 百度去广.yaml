@@ -7,11 +7,11 @@ http:
     - m.baidu.com
     - www.baidu.com
   script:
-    - match: ^https?:\/\/(www|m)\.baidu\.com(/$|\/\?ref.*)
+    - match: ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9})
       name: 百度-EAE
       type: response
       require-body: true
 script-providers:
   百度-EAE:
-    url: https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+    url: https://kelee.one/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js
     interval: 86400
