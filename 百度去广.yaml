@@ -13,5 +13,5 @@ http:
       require-body: true
 script-providers:
   百度-EAE:
-    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/BaiduSearch/BaiduSearchHomePage_remove_ads.js
+    url: https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
     interval: 86400
