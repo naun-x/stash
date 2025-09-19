@@ -4,11 +4,6 @@ category: 工具
 openUrl: http://boxjs.com
 icon: https://rx.nzvrn.com/x/boxjs
 http:
-  force-http-engine:
-    - 'boxjs.com:80'
-    - 'boxjs.net:80'
-    - '*.boxjs.com:80'
-    - '*.boxjs.net:80'
   mitm:
     - 'boxjs.com'
     - 'boxjs.net'
