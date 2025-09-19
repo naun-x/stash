@@ -1,7 +1,7 @@
 name: BoxJs
 desc: http://boxjs.com
 category: 工具
-openUrl: http://boxjs.com
+openUrl: 脚本工具
 icon: https://rx.nzvrn.com/x/boxjs
 http:
   mitm:
