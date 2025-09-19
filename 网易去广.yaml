@@ -33,16 +33,12 @@ http:
       require-body: true
       binary-mode: true
       timeout: 20
-      argument: |-
-        [ false, false, false, false, false, false, false, false, false]
     - match: ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/home\/framework\/tab
       name: 网易-EAE
       type: response
       require-body: true
       binary-mode: true
       timeout: 20
-      argument: |-
-        [ false, false, false]
     - match: ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/page\/discovery\/resource\/show
       name: 网易-EAE
       type: response
