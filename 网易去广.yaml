@@ -28,59 +28,51 @@ http:
     - match: ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs)
       name: 网易-EAE
       type: request
-      require-body: false
-      binary-mode: false
+      require-body: true
+      binary-mode: true
       timeout: 20
-      argument: [ "", "", ""]
     - match: ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/v3\/song\/detail
       name: 网易-EAE
       type: request
-      require-body: false
-      binary-mode: false
+      require-body: true
+      binary-mode: true
       timeout: 20
-      argument: [ "", "", ""]
     - match: ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/song\/(?:chorus|enhance\/|play\/|type\/detail\/get)
       name: 网易-EAE
       type: request
-      require-body: false
-      binary-mode: false
+      require-body: true
+      binary-mode: true
       timeout: 20
-      argument: [ "", "", ""]
     - match: ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/playermode\/
       name: 网易-EAE
       type: request
-      require-body: false
-      binary-mode: false
+      require-body: true
+      binary-mode: true
       timeout: 20
-      argument: [ "", "", ""]
     - match: ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page)
       name: 网易-EAE
       type: request
-      require-body: false
-      binary-mode: false
+      require-body: true
+      binary-mode: true
       timeout: 20
-      argument: [ "", "", ""]
     - match: ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage
       name: 网易-EAE
       type: request
-      require-body: false
-      binary-mode: false
+      require-body: true
+      binary-mode: true
       timeout: 20
-      argument: [ "", "", ""]
     - match: ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/w?e?api\/(?:homepage\/|v6\/)?playlist\/(?!(?:delete|subscribe|unsubscribe))
       name: 网易-EAE
       type: request
-      require-body: false
-      binary-mode: false
+      require-body: true
+      binary-mode: true
       timeout: 20
-      argument: [ "", "", ""]
     - match: ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query
       name: 网易-EAE
       type: request
-      require-body: false
-      binary-mode: false
+      require-body: true
+      binary-mode: true
       timeout: 20
-      argument: [ "", "", ""]
     - match: ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/(?:batch|v2\/resource\/comment\/floor\/get)
       name: 网易-EBE
       type: response
@@ -93,14 +85,12 @@ http:
       require-body: true
       binary-mode: true
       timeout: 20
-      argument: [ false, false, false, false, false, false, false, false, false]
     - match: ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/link\/home\/framework\/tab
       name: 网易-EBE
       type: response
       require-body: true
       binary-mode: true
       timeout: 20
-      argument: [ false, false, false, false]
     - match: ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/link\/page\/discovery\/resource\/show
       name: 网易-EBE
       type: response
