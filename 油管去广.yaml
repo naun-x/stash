@@ -13,11 +13,11 @@ http:
     - ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-200
   script:
     - match: ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$
-      name: 响应-EAE
+      name: 油管-EAE
       type: response
       require-body: true
       binary-mode: true
 script-providers:
-  响应-EAE:
+  油管-EAE:
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
     interval: 86400
