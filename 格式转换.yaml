@@ -3,36 +3,39 @@ desc: 格式转换
 category: 管理工具
 icon: https://rx.nzvrn.com/x/script-hub
 http:
+  force-http-engine:
+    - "script.hub"
+    - "*.script.hub"
   mitm:
-    - 'script.hub'
-    - '*.script.hub'
+    - "script.hub"
+    - "*.script.hub"
   script:
     - match: ^https?:\/\/script\.hub\/($|edit\/|reload)
-      name: 前端-EAE
+      name: 前端-ZAZ
       type: request
-      timeout: 120
+      timeout: 300
     - match: ^https?:\/\/script\.hub\/file\/_start_\/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module)
-      name: 转换-EAE
+      name: 重写-ZAZ
       type: request
-      timeout: 120
+      timeout: 300
     - match: ^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set
-      name: 转换-EBE
+      name: 规则-ZAZ
       type: request
-      timeout: 120
+      timeout: 300
     - match: ^https?:\/\/script\.hub\/convert\/
-      name: 脚本-EAE
+      name: 脚本-ZAZ
       type: request
-      timeout: 120
+      timeout: 300
 script-providers:
-  前端-EAE:
-    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.beta.js
+  前端-ZAZ:
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js
     interval: 86400
-  转换-EAE:
-    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.beta.js
+  重写-ZAZ:
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js
     interval: 86400
-  转换-EBE:
-    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.beta.js
+  规则-ZAZ:
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js
     interval: 86400
-  脚本-EAE:
-    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.beta.js
+  脚本-ZAZ:
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js
     interval: 86400
