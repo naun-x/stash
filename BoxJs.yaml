@@ -4,10 +4,10 @@ category: 脚本工具
 icon: https://rx.nzvrn.com/x/boxjs
 http:
   force-http-engine:
-    - 'boxjs.com:80'
-    - 'boxjs.net:80'
-    - '*.boxjs.com:80'
-    - '*.boxjs.net:80'
+    - 'boxjs.com'
+    - 'boxjs.net'
+    - '*.boxjs.com'
+    - '*.boxjs.net'
   mitm:
     - 'boxjs.com'
     - 'boxjs.net'
