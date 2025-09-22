@@ -3,6 +3,11 @@ desc: 脚本工具
 category: 脚本工具
 icon: https://rx.nzvrn.com/x/boxjs
 http:
+  force-http-engine:
+    - 'boxjs.com:80'
+    - 'boxjs.net:80'
+    - '*.boxjs.com:80'
+    - '*.boxjs.net:80'
   mitm:
     - 'boxjs.com'
     - 'boxjs.net'
