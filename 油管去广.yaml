@@ -17,7 +17,7 @@ http:
       type: response
       require-body: true
       binary-mode: true
-      argument: [true,true,true,'zh-Hans','zh-Hans',false]
+      argument: [ true, true, true, "zh-Hans", "zh-Hans", false ]
 script-providers:
   响应-EAE:
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
