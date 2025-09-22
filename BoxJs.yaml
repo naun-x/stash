@@ -1,4 +1,4 @@
-name: BoxJs
+name: 脚本工具
 desc: 脚本工具
 category: 脚本工具
 icon: https://rx.nzvrn.com/x/boxjs
@@ -15,11 +15,11 @@ http:
     - '*.boxjs.net'
   script:
     - match: ^https?:\/\/(.+\.)?boxjs\.(com|net)
-      name: BoxJs
+      name: 脚本-EBE
       type: request
       require-body: true
       timeout: 120
 script-providers:
-  BoxJs:
+  脚本-EBE:
     url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
     interval: 86400
