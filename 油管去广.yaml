@@ -15,9 +15,9 @@ http:
     - match: ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$
       name: 响应-EAE
       type: response
+      argument: string
       require-body: true
       binary-mode: true
-      argument: [ true, true, true, "zh-Hans", "zh-Hans", false ]
 script-providers:
   响应-EAE:
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
