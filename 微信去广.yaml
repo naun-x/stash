@@ -132,7 +132,6 @@ http:
     - 'ne.gdsz.sinopec.com'
     - 'energy.xiaojukeji.com'
   url-rewrite:
-    - ^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ reject-dict
     - ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? - reject-dict
     - ^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword - reject-dict
     - ^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ - reject-dict
