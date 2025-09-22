@@ -4,11 +4,11 @@ category: 管理工具
 icon: https://rx.nzvrn.com/x/script-hub
 http:
   force-http-engine:
-    - "script.hub"
-    - "*.script.hub"
+    - 'script.hub'
+    - '*.script.hub'
   mitm:
-    - "script.hub"
-    - "*.script.hub"
+    - 'script.hub'
+    - '*.script.hub'
   script:
     - match: ^https?:\/\/script\.hub\/($|edit\/|reload)
       name: 前端-ZAZ
