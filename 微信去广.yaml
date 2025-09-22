@@ -3,15 +3,24 @@ desc: 微信广告拦截
 category: 广告拦截
 icon: https://rx.nzvrn.com/x/weixin
 rules:
+  - DOMAIN-KEYWORD,wechatpay,DIRECT
+  - DOMAIN,epay.ahrcu.com,DIRECT
+  - DOMAIN,mixpay.wechat.com,DIRECT
+  - DOMAIN-SUFFIX,wxs.qq.com,REJECT
+  - DOMAIN,badjs.weixinbridge.com,REJECT
+  - DOMAIN,dns.weixin.qq.com.cn,REJECT
   - DOMAIN,wxsnsdy.wxs.qq.com,REJECT
   - DOMAIN,wxsmsdy.video.qq.com,REJECT
   - DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
   - DOMAIN,ads-shopping.shouqianba.com,REJECT
   - DOMAIN,ad.maoyan.com,REJECT
   - DOMAIN,e.jparking.cn,REJECT
-  - DOMAIN-SUFFIX,wxs.qq.com,REJECT
+  - DOMAIN,et.ykccn.com,REJECT
 http:
   mitm:
+    - 'mp.weixin.qq.com'
+    - 'weixin110.qq.com'
+    - 'security.wechat.com'
     - '3pp.starbucks.com.cn'
     - 'aag.enmonster.com'
     - 'activity.yonghuivip.com'
@@ -85,8 +94,11 @@ http:
     - 'suyun-guest.daojia.com'
     - 'tbgapplet.carlsberg.asia'
     - 'tm-api.pin-dao.cn'
+    - 'mcs-mimp-web.sf-express.com'
+    - 'ucmp-static.sf-express.com'
     - 'ucmp.sf-express.com'
     - 'ump.ems.com.cn'
+    - 'ec.ems.com.cn'
     - 'vod-movie.maoyan.com'
     - 'webapi.qmai.cn'
     - 'webchatapp.fcbox.com'
@@ -100,14 +112,29 @@ http:
     - 'mcsp.cloudpnr.com'
     - 'api.szbgcx.cn'
     - 'rms.meituan.com'
+    - 'mapi.dianping.com'
+    - 'web.meituan.com'
+    - 'npay.meituan.com'
+    - 'apimobile.meituan.com'
     - 'chong.qq.com'
     - 'wx.online-cmcc.cn'
     - 'wx.10086.cn'
+    - 'elife.icbc.com.cn'
+    - 'ocrifs.ejoy.sinopec.com'
+    - 'gw3.ykccn.com'
+    - 'clubmed.bd.clubmedmnp.com'
+    - 'gugongmini.dpm.org.cn'
+    - 'service.haiersmarthomes.com'
+    - 'cdb.meituan.com'
+    - 'wx.17u.cn'
+    - 'a1d5b283e-wx621112590b635086.sh.wxgateway.com'
+    - 'apis.folidaymall.com'
     - 'ne.gdsz.sinopec.com'
-    - 'mp.weixin.qq.com'
-    - 'weixin110.qq.com'
-    - 'security.wechat.com'
+    - 'energy.xiaojukeji.com'
   url-rewrite:
+    - ^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ reject-dict
+    - ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? - reject-dict
+    - ^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword - reject-dict
     - ^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ - reject-dict
     - ^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach - reject
     - ^https:\/\/images\.qmai\.cn\/s214925\/2023 - reject-dict
@@ -137,7 +164,9 @@ http:
     - ^https:\/\/apiproxy\.zuche\.com\/resource\/carrctapi\/home\/page\/advertising - reject-dict
     - ^https:\/\/miniprogram\.ishansong\.com\/cms\/faq\/query - reject-dict
     - ^https:\/\/ads\.ishansong\.com\/advert - reject-dict
-    - ^https:\/\/ump\.ems\.com\.cn\/mailAd$ - reject
+    - ^https?:\/\/ec\.ems\.com\.cn\/mailAd$ - reject
+    - ^https?:\/\/ec\.ems\.com\.cn\/ecr-exp-web\/advert - reject
+    - ^https?:\/\/ump\.ems\.com\.cn\/mailAd$ - reject
     - ^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert - reject-dict
     - ^https:\/\/r2\.gzyct\.com\/qrcode\/advert - reject-dict
     - ^https:\/\/applets\.jtexpress\.com\.cn - reject-dict
@@ -210,15 +239,54 @@ http:
     - ^https:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/4\?cid= - reject-dict
     - ^https:\/\/tbgapplet\.carlsberg\.asia\/tuborg\/banner\/(loading|index) - reject-dict
     - ^https:\/\/api\.pinduoduo\.com\/api\/ktt_gateway\/activity\/feeds\/personal_home_page\/ - reject
+    - ^https:\/\/api\.szbgcx\.cn\/account\/adv\/ - reject
     - ^https:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query - reject-dict
     - ^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList - reject-dict
+    - ^https?:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/integralPlanet\/getCxAdvertiseList - reject-dict
+    - ^https?:\/\/ucmp-static\.sf-express\.com\/proxy\/wxbase\/wxTicket\/wxLiveStreamInfo\?pageNo - reject-dict
+    - ^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberManage\/memberEquity\/queryRecommendEquity - reject-dict
+    - ^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberActLengthy\/fullGiveActivityService\/fullGiveInfo - reject-dict
     - ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/conf\?ns=daijia-front&name= - reject-dict
     - ^https:\/\/daijia\.kuaidadi\.com\/gateway\?api=prado\.cms\.delivery\.batch&apiVe - reject-dict
-    - ^https:\/\/api\.szbgcx\.cn\/account\/adv\/ - reject
+    - ^https:\/\/wx\.17u\.cn\/xcxhomeapi\/aggregator\/index - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/mytourapi\/mytrip\/blankflight - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/membermessageuserapi\/message\/list - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/wechatmypubapi\/myInfo\/messageBox - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/membermessageuserapi\/category\/getCategory - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/homemarketapi\/search\/recommend - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/mytourapi\/blankpage\/recommendList - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/homemarketapi\/aggregator\/index - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/wxocbdapi\/adService\/getAd - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/xcxhomeapi\/home\/converge - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/platformpubapi\/customer\/lead\/getInfo - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/mytourapi\/mytrip\/toptips - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/vacation\/webapp\/tailor\/miniHomeConfig - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/wireless\/monitor\/wx\/common\/compressevent - reject-dict
+    - ^https:\/\/wx\.17u\.cn\/wechatmypubapi\/myInfo\/listIcons - reject-dict
+    - ^https:\/\/a1d5b283e-wx621112590b635086\.sh\.wxgateway\.com\/xcxhomeapi\/home\/screen - reject-dict
+    - ^https:\/\/mapi\.dianping\.com\/baymax\/adrec\/getrecads - reject-dict
+    - ^https:\/\/mapi\.dianping\.com\/baymax\/getSlotAds - reject-dict
+    - ^https:\/\/web\.meituan\.com\/api\/miniprogram\/my\/novelZone - reject-dict
+    - ^https:\/\/web\.meituan\.com\/api\/miniprogram\/my\/resources - reject-dict
+    - ^https:\/\/npay\.meituan\.com\/conch\/flow\/mypage-wallet-info - reject-dict
+    - ^https:\/\/web\.meituan\.com\/newUser\/returnMoney\/popWindow - reject-dict
+    - ^https:\/\/npay\.meituan\.com\/conch\/walletv3\/wechat-pop-window - reject-dict
+    - ^https:\/\/apimobile\.meituan\.com\/group\/v1\/deal\/searchpage\/defaultword - reject-dict
     - ^https:\/\/wx\.online-cmcc\.cn\/contactpoint\/customer\/api\/list\? - reject-dict
     - ^https:\/\/wx\.10086\.cn\/qwhdhub\/activity\/info - reject-dict
-    - ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? - reject-dict
-    - ^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword - reject-dict
+    - ^https?:\/\/elife\.icbc\.com\.cn\/OFSTNEWBASE\/floorinfo\/getMantlePages\.do - reject-200
+    - ^https?:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo - reject-dict
+    - ^https:\/\/gw3\.ykccn\.com\/api\/omp\/mt\/enterpriseWeChatConfig\/app\/queryCityConfig - reject-dict
+    - ^https:\/\/gw3\.ykccn\.com\/api\/omp\/mt\/appAdvertising\/queryAdvertisingByParams - reject-dict
+    - ^https:\/\/gw3\.ykccn\.com\/api\/omp\/mt\/charge\/activity\/package\/newest - reject-dict
+    - ^https?:\/\/clubmed\.bd\.clubmedmnp\.com\/miniorder\/api\/basic\/common - reject-dict
+    - ^https?:\/\/gugongmini\.dpm\.org\.cn\/gugong_applet\/open-screen - reject-dict
+    - ^https?:\/\/service\.haiersmarthomes\.com\/management\/banner\/getBannerList\?source=4 - reject-dict
+    - ^https?:\/\/cdb\.meituan\.com\/marketing\/source\/getPageSlotList - reject-dict
+    - ^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/activityInfo - reject-dict
+    - ^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/getPageDetail - reject-dict
+    - ^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display - reject-dict
+    - ^https:\/\/energy\.xiaojukeji\.com\/am\/marketing\/api\/member\/facade\/charge\/personal\/center - reject-dict
   body-rewrite:
     - ^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$ response-jq delpaths([["data"]])
     - ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ response-jq delpaths([["data",0]])
@@ -232,36 +300,48 @@ http:
     - ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? response-jq delpaths([["data","request","number","markSeat","servicehallFuncList"]])
     - ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? response-jq delpaths([["data","request","number","servicehallFuncList"]])
   script:
-    - match: ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config
+    - match: ^https\:\/\/(?:weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?
       name: 微信-EAE
       type: response
       require-body: true
-    - match: ^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel
+    - match: ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config
       name: 微信-EBE
       type: response
       require-body: true
-    - match: ^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity)
+    - match: ^https?:\/\/ec\.ems\.com\.cn\/ecr-qry-web\/redis\/pageInfoByChannel
       name: 微信-ECE
       type: response
       require-body: true
-    - match: ^https:\/\/minifm\.maxxipoint\.com\/banner\/list
+    - match: ^https?:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel
+      name: 微信-ECE
+      type: response
+      require-body: true
+    - match: ^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel
       name: 微信-EDE
       type: response
       require-body: true
-    - match: ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/home
+    - match: ^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity)
       name: 微信-EEE
       type: response
       require-body: true
-    - match: ^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER
+    - match: ^https:\/\/minifm\.maxxipoint\.com\/banner\/list
       name: 微信-EFE
       type: response
       require-body: true
-    - match: ^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info
+    - match: ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/home
       name: 微信-EGE
       type: response
       require-body: true
-    - match: ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.homeConfig
+    - match: ^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER
       name: 微信-EHE
+      type: response
+      require-body: true
+    - match: ^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info
+      name: 微信-EJE
+      type: response
+      require-body: true
+    - match: ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.homeConfig
+      name: 微信-EKE
       type: response
       require-body: true
     - match: ^https:\/\/cappapi\.alittle-tea\.com\/open\?method=catering\.set\.ad
@@ -269,58 +349,75 @@ http:
       type: response
       require-body: true
     - match: ^https:\/\/api\.prod\.dj\.mstand\.cn\/scrm\/mini\/app\/index\/info
-      name: 微信-EJE
+      name: 微信-ENE
       type: response
       require-body: true
     - match: ^https:\/\/passenger\.t3go\.cn\/(solution\-|common\-)?(passenger\-)?(activity\-|app\-)?api\/notoken\/(trip\/)?api\/(home\/|common\/)?(v[1-3]\/)?(ad\/getNegativescreen|solution\/passenger\/open\/getHomeMenu|leftmenu|getHomeInfoGlobal)
-      name: 微信-EKE
-      type: response
-      require-body: true
-    - match: ^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front)
       name: 微信-EOE
       type: response
       require-body: true
-    - match: ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?
-      name: 外链-EAE
+    - match: ^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front)
+      name: 微信-EPE
+      type: response
+      require-body: true
+    - match: ^https:\/\/web\.meituan\.com\/api\/miniprogram\/tabbar\/all\/query
+      name: 微信-EQE
+      type: response
+      require-body: true
+    - match: ^https:\/\/web\.meituan\.com\/api\/miniprogram\/index\/aggregate
+      name: 微信-EQE
+      type: response
+      require-body: true
+    - match: ^https?:\/\/apis\.folidaymall\.com\/online\/capi\/component\/getPageComponents
+      name: 微信-ERE
       type: response
       require-body: true
 script-providers:
   微信-EAE:
-    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js
+    url: https://kelee.one/Resource/JavaScript/Weixin/Weixin_external_links_unlock.js
     interval: 86400
   微信-EBE:
-    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js
     interval: 86400
   微信-ECE:
-    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/xiaotucc/xiaotucc.js
+    url: https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/wechatApplet.js
     interval: 86400
   微信-EDE:
-    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js
     interval: 86400
   微信-EEE:
-    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/xiaotucc/xiaotucc.js
     interval: 86400
   微信-EFE:
-    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js
     interval: 86400
   微信-EGE:
-    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js
     interval: 86400
   微信-EHE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js
+    interval: 86400
+  微信-EJE:
+    url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js
+    interval: 86400
+  微信-EKE:
     url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js
     interval: 86400
   微信-ELE:
     url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/alittle-tea/alittle-tea.js
     interval: 86400
-  微信-EJE:
+  微信-ENE:
     url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/M_Stand/M_Stand.js
     interval: 86400
-  微信-EKE:
+  微信-EOE:
     url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/T3/T3.js
     interval: 86400
-  微信-EOE:
+  微信-EPE:
     url: https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ming/ming.js
     interval: 86400
-  外链-EAE:
-    url: https://kelee.one/Resource/JavaScript/Weixin/Weixin_external_links_unlock.js
+  微信-EQE:
+    url: https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/MeiTuanNoAd.js
+    interval: 86400
+  微信-ERE:
+    url: https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/foliday.js
     interval: 86400
