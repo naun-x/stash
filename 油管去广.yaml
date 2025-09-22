@@ -2,22 +2,28 @@ name: 油管去广告
 desc: 油管广告拦截
 category: 广告拦截
 icon: https://rx.nzvrn.com/x/youtube
-rules:
-  - AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,QUIC)),REJECT
-  - AND,((DOMAIN-SUFFIX,youtubei.googleapis.com),(PROTOCOL,QUIC)),REJECT
 http:
   mitm:
+    - '-redirector*.googlevideo.com'
     - '*.googlevideo.com'
+    - 'www.youtube.com'
+    - 's.youtube.com'
     - 'youtubei.googleapis.com'
   url-rewrite:
-    - ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-200
+    - (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
+    - ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject-200
+    - ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject-200
+    - ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject-200
+    - ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject-200
   script:
-    - match: ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$
+    - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)
       name: 油管-EAE
       type: response
       require-body: true
+      max-size: -1
       binary-mode: true
+      timeout: 60
 script-providers:
   油管-EAE:
-    url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
+    url: https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js
     interval: 86400
