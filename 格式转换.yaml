@@ -11,31 +11,31 @@ http:
     - '*.script.hub'
   script:
     - match: ^https?:\/\/script\.hub\/($|edit\/|reload)
-      name: 前端-ZAZ
+      name: 前端-EAE
       type: request
       timeout: 300
     - match: ^https?:\/\/script\.hub\/file\/_start_\/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module)
-      name: 重写-ZAZ
+      name: 重写-EAE
       type: request
       timeout: 300
     - match: ^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set
-      name: 规则-ZAZ
+      name: 规则-EAE
       type: request
       timeout: 300
     - match: ^https?:\/\/script\.hub\/convert\/
-      name: 脚本-ZAZ
+      name: 脚本-EAE
       type: request
       timeout: 300
 script-providers:
-  前端-ZAZ:
+  前端-EAE:
     url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js
     interval: 86400
-  重写-ZAZ:
+  重写-EAE:
     url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js
     interval: 86400
-  规则-ZAZ:
+  规则-EAE:
     url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js
     interval: 86400
-  脚本-ZAZ:
+  脚本-EAE:
     url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js
     interval: 86400
