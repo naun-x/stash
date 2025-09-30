@@ -4,12 +4,12 @@
 #!icon = https://rx.nzvrn.com/x/youtube
 #!homepage = https://hub.kelee.one
 [Argument]
-blockUpload=switch,true,false,tag=上传按钮
-blockShorts=switch,true,false,tag=短视按钮
-blockImmersive=switch,true,false,tag=选段按钮
-captionLang=select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=字幕翻译
-lyricLang=select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=歌词翻译
-debug=switch,false,true,tag=调试模式
+blockUpload = switch,true,false,tag=上传按钮
+blockShorts = switch,true,false,tag=短视按钮
+blockImmersive = switch,true,false,tag=选段按钮
+captionLang = select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=字幕翻译
+lyricLang = select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=歌词翻译
+debug = switch,false,true,tag=调试模式
 [MITM]
 hostname = *.googlevideo.com, youtubei.googleapis.com
 [Rule]
@@ -18,4 +18,4 @@ AND,((DOMAIN-SUFFIX,youtubei.googleapis.com),(PROTOCOL,QUIC)),REJECT
 [Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-200
 [Script]
-http-response ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$ script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js, requires-body=true, binary-body-mode=true, tag=油管广告, argument=[{blockUpload},{blockShorts},{blockImmersive},{captionLang},{lyricLang},{debug}]
+http-response ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$ script-path=https://xzx.nzvrn.com/https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js, requires-body=true, binary-body-mode=true, tag=油管广告, argument=[{blockUpload},{blockShorts},{blockImmersive},{captionLang},{lyricLang},{debug}]
