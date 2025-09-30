@@ -4,18 +4,18 @@
 #!icon=https://rx.nzvrn.com/x/netease-cloudmusic
 #!homepage=https://hub.kelee.one
 [Argument]
-MY=switch,"false","true",tag=漫游标签, desc=
-DT=switch,"false","true",tag=笔记标签, desc=
-FX=switch,"false","true",tag=发现标签, desc=
-PRGG=switch,"false","true",tag=问候语页, desc=
-PRRK=switch,"false","true",tag=排行榜页, desc=
-PRDRD=switch,"false","true",tag=每日推荐, desc=
-PRSCVPT=switch,"false","true",tag=推荐歌单, desc=
-PRST=switch,"false","true",tag=最近常听, desc=
-PRRR=switch,"false","true",tag=雷达歌单, desc=
-HMPR=switch,"false","true",tag=音乐合伙, desc=
-PRMST=switch,"false","true",tag=推荐专属, desc=
-PRCN=switch,"false","true",tag=你的专属, desc=
+MY=switch,"false","true",tag = 漫游标签, desc =
+DT=switch,"false","true",tag = 笔记标签, desc =
+FX=switch,"false","true",tag = 发现标签, desc =
+PRGG=switch,"false","true",tag = 问候语页, desc =
+PRRK=switch,"false","true",tag = 排行榜页, desc =
+PRDRD=switch,"false","true",tag = 每日推荐, desc =
+PRSCVPT=switch,"false","true",tag = 推荐歌单, desc =
+PRST=switch,"false","true",tag = 最近常听, desc =
+PRRR=switch,"false","true",tag = 雷达歌单, desc =
+HMPR=switch,"false","true",tag = 音乐合伙, desc =
+PRMST=switch,"false","true",tag = 推荐专属, desc =
+PRCN=switch,"false","true",tag = 你的专属, desc =
 [Rule]
 DOMAIN,iadmat.nosdn.127.net,REJECT
 DOMAIN,iadmatapk.nosdn.127.net,REJECT
@@ -34,9 +34,9 @@ hostname = interface*.music.163.com
 ^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ mock-response-body data-type=text
 ^https?:\/\/interface\d?\.music\.163.com\/w?e?api\/search\/default mock-response-body data-type=text
 [Script]
-http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:batch|v2\/resource\/comment\/floor\/get) script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=20, tag=评论区等
-http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:homepage\/block\/page|link\/page\/rcmd\/(?:block\/resource\/multi\/refresh|resource\/show)) script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=20, tag=推荐主页, argument="[{PRGG},{PRRK},{PRDRD},{PRSCVPT},{PRST},{PRRR},{HMPR},{PRMST},{PRCN}]"
-http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/home\/framework\/tab script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=20, tag=底部选项, argument="[{MY},{DT},{FX}]"
-http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/page\/discovery\/resource\/show script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=20, tag=发现页面
-http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/position\/show\/resource script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=20, tag=我的页面
-http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/user\/follow\/users\/mixed\/get script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=20, tag=显示关注
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:batch|v2\/resource\/comment\/floor\/get) script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 评论区等
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:homepage\/block\/page|link\/page\/rcmd\/(?:block\/resource\/multi\/refresh|resource\/show)) script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 推荐主页, argument = "[{PRGG},{PRRK},{PRDRD},{PRSCVPT},{PRST},{PRRR},{HMPR},{PRMST},{PRCN}]"
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/home\/framework\/tab script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部选项, argument = "[{MY},{DT},{FX}]"
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/page\/discovery\/resource\/show script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body=true, binary-body-mode=true, timeout = 20, tag = 发现页面
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/position\/show\/resource script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 我的页面
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/user\/follow\/users\/mixed\/get script-path=https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 显示关注
