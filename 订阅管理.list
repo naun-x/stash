@@ -10,6 +10,6 @@ hostname = sub.store
 [Rule]
 DOMAIN,sub-store.vercel.app,PROXY
 [Script]
-http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path=https://xzx.nzvrn.com/https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body = true,timeout = 120,tag=订阅核心
-http-request ^https?:\/\/sub\.store script-path=https://xzx.nzvrn.com/https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body = true,timeout = 120,tag=订阅脚本
-cron "55 23 * * *" script-path=https://xzx.nzvrn.com/https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js,timeout = 120,tag=订阅同步
+http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path=https://xzx.nzvrn.com/https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js, requires-body=true, timeout=120, tag=订阅核心
+http-request ^https?:\/\/sub\.store script-path=https://xzx.nzvrn.com/https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js, requires-body=true, timeout=120, tag=订阅脚本
+cron "55 23 * * *" script-path=https://xzx.nzvrn.com/https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js, timeout=120, tag=订阅同步
