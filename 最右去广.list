@@ -2,7 +2,7 @@
 #!desc=最右去除广告
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://rx.nzvrn.com/x/zuiyou
-#!openUrl=https://apps.apple.com/app/id942443472
+#!openUrl=https://izuiyou.com
 #!homepage=https://hub.kelee.one
 [Rule]
 DOMAIN,adapi.izuiyou.com,REJECT
