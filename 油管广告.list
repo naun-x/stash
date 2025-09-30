@@ -11,7 +11,7 @@ captionLang=select, "zh-Hans", "zh-Hant", "ja", "ko", "en", "off", tag=字幕翻
 lyricLang=select, "zh-Hans", "zh-Hant", "ja", "ko", "en", "off", tag=歌词翻译
 debug=switch, false, true, tag=调试模式
 [MitM]
-hostname=*.googlevideo.com, youtubei.googleapis.com
+hostname = *.googlevideo.com, youtubei.googleapis.com
 [Rule]
 AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,QUIC)),REJECT
 AND,((DOMAIN-SUFFIX,youtubei.googleapis.com),(PROTOCOL,QUIC)),REJECT
