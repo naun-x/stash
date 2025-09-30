@@ -1,15 +1,15 @@
 #!name = 油管广告
 #!desc = 油管去广告
-#!author=Maasea[https://github.com/Maasea], VirgilClyne[https://github.com/VirgilClyne], Choler[https://github.com/Choler], DivineEngine[https://github.com/DivineEngine], app2smile[https://github.com/app2smile]
+#!author = Maasea[https://github.com/Maasea], VirgilClyne[https://github.com/VirgilClyne], Choler[https://github.com/Choler], DivineEngine[https://github.com/DivineEngine], app2smile[https://github.com/app2smile]
 #!icon = https://rx.nzvrn.com/x/youtube
 #!homepage = https://hub.kelee.one
 [Argument]
-blockUpload = switch,true,false,tag=上传按钮
-blockShorts = switch,true,false,tag=短视按钮
-blockImmersive = switch,true,false,tag=选段按钮
-captionLang = select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=字幕翻译
-lyricLang = select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=歌词翻译
-debug = switch,false,true,tag=调试模式
+blockUpload=switch,true,false,tag=上传按钮
+blockShorts=switch,true,false,tag=短视按钮
+blockImmersive=switch,true,false,tag=选段按钮
+captionLang=select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=字幕翻译
+lyricLang=select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=歌词翻译
+debug=switch,false,true,tag=调试模式
 [MITM]
 hostname = *.googlevideo.com, youtubei.googleapis.com
 [Rule]
