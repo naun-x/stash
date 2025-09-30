@@ -10,11 +10,11 @@ blockImmersive = switch, true, false, tag = 选段按钮, desc = 用于隐藏You
 captionLang = select, "zh-Hans", "zh-Hant", "ja", "ko", "en", "off", tag = 字幕翻译, desc = 选择翻译为何种语言字幕
 lyricLang = select, "zh-Hans", "zh-Hant", "ja", "ko", "en", "off", tag = 歌词翻译, desc = 选择翻译为何种语言字幕
 debug = switch, false, true, tag = 调试模式, desc = 此插件的调试模式
+[MitM]
+hostname = *.googlevideo.com, youtubei.googleapis.com
 [Rule]
 AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, QUIC)), REJECT
 AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com),  (PROTOCOL, QUIC)), REJECT
-[MitM]
-hostname = *.googlevideo.com, youtubei.googleapis.com
 [Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-200
 [Script]
