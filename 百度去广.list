@@ -1,0 +1,48 @@
+#!name=百度去广
+#!desc=百度去除广告
+#!author=Keywos[https://github.com/Keywos]
+#!icon=https://rx.nzvrn.com/x/baidu
+#!homepage=https://hub.kelee.one
+[Rule]
+DOMAIN,180.76.76.200,REJECT
+IP-CIDR,180.76.76.200/32,REJECT,no-resolve
+[MITM]
+hostname = m.baidu.com, www.baidu.com, pan.baidu.com, tiebac.baidu.com, tieba.baidu.com, imeres.baidu.com, mbd.baidu.com, mime.baidu.com, afd.baidu.com, newclient.map.baidu.com, yongche.baidu.com, ecom.map.baidu.com
+[Rewrite]
+^https:\/\/pan\.baidu\.com\/api\/getconfig - reject-dict
+^https:\/\/pan\.baidu\.com\/api\/getsyscfg - reject-dict
+^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist - reject-dict
+^https:\/\/pan\.baidu\.com\/act\/api\/activityentry - reject-dict
+^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user\?method=gamecenter - reject-dict
+^https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list - reject-dict
+^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv - reject-dict
+^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ response-body-json-del recom_naws_list namoaixud_entry custom_grid duxiaoman_entry finance_tab
+^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ response-body-json-replace user.shake_ad_switch.is_show 0
+^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ response-body-json-jq '.zone_info |= map(select(.type as $t | ["commerce","banner","game"] | index($t) | not))'
+^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ response-body-json-del task_list game_center tools tools.yunying_tools_list tools.show_tools_list
+^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ response-body-json-jq '.tools.show_tools_list |= map(.tools_list |= map(select(.title != "度小满钱包")))'
+^https:\/\/tiebac\.baidu\.com\/c\/f\/frs\/frsBottom$ response-body-json-del card_activity
+^https:\/\/tieba\.baidu\.com\/c\/f\/member\/getMemberPopups$ - reject-dict
+^https:\/\/tiebac\.baidu\.com\/c\/f\/search\/discover$ - reject-dict
+^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads/list - reject-dict
+^https?:\/\/mime\.baidu\.com\/sapi\/v1\/lccorpus\/(applist|pannellist) - reject-dict
+^https?:\/\/mime\.baidu\.com\/sapi\/v1\/(circle\/joinedlist|lccorpus\/usercorpussync|aihelpactivity\/aihelpresource) - reject-dict
+^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list - reject-dict
+^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input - reject-dict
+^https:\/\/mime\.baidu\.com\/v5\/(fb\/st\?logtype|(notiv3|cellloc_noti|noti_cloudswitch_noti)\/info) - reject-dict
+^https:\/\/newclient\.map\.baidu\.com\/feed\/govui\/rich_content response-body-json-del data
+^https:\/\/newclient\.map\.baidu\.com\/client\/noticebar\/get\? response-body-json-del content.multi_data
+^https:\/\/newclient\.map\.baidu\.com\/(client\/)?usersystem\/mine\/page\? response-body-json-replace data {}
+^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads&type=user_home_new_service response-body-json-del ads
+^https:\/\/newclient\.map\.baidu\.com\/living\/nearby\/api\? response-body-json-del Result.cards[1] Result.cards[4] Result.cards[5] Result.cards[9]
+^https:\/\/afd\.baidu\.com\/afd\/entry\?action=(update|query) - reject-dict
+^https:\/\/yongche\.baidu\.com\/gomarketing\/api\/popup\/getentrancecordovaurl$ - reject-dict
+^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/cobuild\/pull\? - reject-dict
+^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/operationgirdle$ - reject-dict
+^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/baseinfo$ - reject-dict
+^https:\/\/ecom\.map\.baidu\.com\/ad-ops\/afd\/popup\? - reject-dict
+^https:\/\/maphotel\.baidu\.com\/hotel\/goextranet\/activity\/detail\? - reject-dict
+[Script]
+http-response ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9}) script-path=https://kelee.one/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js, requires-body=true, tag=搜索首页
+http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://kelee.one/Resource/JavaScript/Tieba/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=函数处理
+http-response ^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)) script-path=https://kelee.one/Resource/JavaScript/Baidu_input_method/Baidu_input_method_remove_ads.js, requires-body=true, tag=输入法广
