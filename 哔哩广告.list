@@ -2,7 +2,6 @@
 #!desc=哔哩去广告
 #!author=kokoryh[https://github.com/kokoryh]
 #!icon=https://rx.nzvrn.com/x/bilibili
-#!openUrl=https://bilibili.com
 #!homepage=https://hub.kelee.one
 [Argument]
 showUpList=select, "auto", "show", "hide",tag=动态最常, desc=auto：仅当列表中存在直播状态时显示；show：始终显示；hide：始终隐藏。
