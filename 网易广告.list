@@ -4,18 +4,18 @@
 #!icon = https://rx.nzvrn.com/x/netease-cloudmusic
 #!homepage = https://hub.kelee.one
 [Argument]
-MY=switch,"false","true",tag=漫游标签
-DT=switch,"false","true",tag=笔记标签
-FX=switch,"false","true",tag=发现标签
-PRGG=switch,"false","true",tag=首页问候
-PRRK=switch,"false","true",tag=首页排行
-PRDRD=switch,"false","true",tag=每日推荐
-PRSCVPT=switch,"false","true",tag=推荐歌单
-PRST=switch,"false","true",tag=最近常听
-PRRR=switch,"false","true",tag=雷达歌单
-HMPR=switch,"false","true",tag=音乐合伙
-PRMST=switch,"false","true",tag=推荐专属
-PRCN=switch,"false","true",tag=你的专属
+MY = switch,"false","true",tag=漫游标签
+DT = switch,"false","true",tag=笔记标签
+FX = switch,"false","true",tag=发现标签
+PRGG = switch,"false","true",tag=首页问候
+PRRK = switch,"false","true",tag=首页排行
+PRDRD = switch,"false","true",tag=每日推荐
+PRSCVPT = switch,"false","true",tag=推荐歌单
+PRST = switch,"false","true",tag=最近常听
+PRRR = switch,"false","true",tag=雷达歌单
+HMPR = switch,"false","true",tag=音乐合伙
+PRMST = switch,"false","true",tag=推荐专属
+PRCN = switch,"false","true",tag=你的专属
 [MITM]
 hostname = interface*.music.163.com
 [Rule]
