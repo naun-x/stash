@@ -8,7 +8,7 @@ DOMAIN,adapi.izuiyou.com,REJECT
 URL-REGEX,"^http:\/\/mercury-gateway\.ixiaochuan\.cn\/mercury\/v1\/ad\/",REJECT-DICT
 URL-REGEX,"^http:\/\/file-share\.izuiyou\.com\/octopus\/media\/templates\/search_home_page_(nv|nv_v2)\/search_home_page_nv",REJECT
 [MITM]
-hostname = api.izuiyou.com, zyfile.izuiyou.com, 203.107.1.1, 203.107.1.33, 203.107.1.66, 203.107.1.67, 203.107.1.97
+hostname=api.izuiyou.com, zyfile.izuiyou.com, 203.107.1.1, 203.107.1.33, 203.107.1.66, 203.107.1.67, 203.107.1.97
 [Rewrite]
 ^https?:\/\/api\.izuiyou\.com\/config\/get_banner - reject-dict
 ^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
