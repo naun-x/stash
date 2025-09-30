@@ -2,7 +2,7 @@
 #!desc=微信去除广告
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://rx.nzvrn.com/x/weixin
-#!openUrl=https://apps.apple.com/app/id414478124
+#!openUrl=https://weixin.com
 #!homepage=https://hub.kelee.one
 [Rule]
 DOMAIN,wxsnsdy.wxs.qq.com,REJECT
