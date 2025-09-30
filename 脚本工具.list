@@ -1,0 +1,12 @@
+#!name=脚本工具
+#!desc=脚本工具
+#!openUrl=http://boxjs.com
+#!author=chavyleung
+#!homepage=https://chavyleung.gitbook.io/boxjs
+#!icon=https://rx.nzvrn.com/x/boxjs
+[Rule]
+DOMAIN-SUFFIX,jsdelivr.net,PROXY
+[MITM]
+hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+[Script]
+http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120, tag=脚本工具
