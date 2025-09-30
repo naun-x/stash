@@ -1,6 +1,7 @@
 DOMAIN,espn.api.edge.bamgrid.com
 DOMAIN,espn.hb.omtrdc.net
 DOMAIN,espndotcom.tt.omtrdc.net
+DOMAIN,disney.my.sentry.io
 DOMAIN-SUFFIX,thisispolaris.com
 DOMAIN-SUFFIX,bamgrid.com
 DOMAIN-SUFFIX,disney.bg
@@ -153,4 +154,3 @@ DOMAIN-SUFFIX,disney.com.au
 DOMAIN-SUFFIX,hsprepack.akamaized.net
 DOMAIN-SUFFIX,disney-portal.my.onetrust.com
 DOMAIN-SUFFIX,disneyplus.com.ssl.sc.omtrdc.net
-DOMAIN,disney.my.sentry.io
