@@ -2,6 +2,7 @@
 #!desc=百度去除广告
 #!author=Keywos[https://github.com/Keywos]
 #!icon=https://rx.nzvrn.com/x/baidu
+#!openUrl=https://baidu.com
 #!homepage=https://hub.kelee.one
 [Rule]
 DOMAIN,180.76.76.200,REJECT
