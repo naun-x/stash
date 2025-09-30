@@ -1,13 +1,13 @@
-#!name=百度广告
-#!desc=百度去广告
-#!author=Keywos[https://github.com/Keywos], app2smile[https://github.com/app2smile], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!icon=https://rx.nzvrn.com/x/baidu
-#!homepage=https://hub.kelee.one
+#!name = 百度广告
+#!desc = 百度去广告
+#!author = Keywos[https://github.com/Keywos], app2smile[https://github.com/app2smile], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon = https://rx.nzvrn.com/x/baidu
+#!homepage = https://hub.kelee.one
 [Rule]
 DOMAIN,180.76.76.200,REJECT
 IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 [MITM]
-hostname=m.baidu.com, www.baidu.com, pan.baidu.com, tiebac.baidu.com, tieba.baidu.com, imeres.baidu.com, mbd.baidu.com, mime.baidu.com, afd.baidu.com, newclient.map.baidu.com, yongche.baidu.com, ecom.map.baidu.com
+hostname = m.baidu.com, www.baidu.com, pan.baidu.com, tiebac.baidu.com, tieba.baidu.com, imeres.baidu.com, mbd.baidu.com, mime.baidu.com, afd.baidu.com, newclient.map.baidu.com, yongche.baidu.com, ecom.map.baidu.com
 [Rewrite]
 ^https:\/\/pan\.baidu\.com\/api\/getconfig - reject-dict
 ^https:\/\/pan\.baidu\.com\/api\/getsyscfg - reject-dict
