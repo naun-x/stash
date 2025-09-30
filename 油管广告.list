@@ -4,12 +4,12 @@
 #!icon=https://rx.nzvrn.com/x/youtube
 #!homepage=https://hub.kelee.one
 [Argument]
-blockUpload=switch,true,false,tag=上传按钮
-blockShorts=switch,true,false,tag=短视按钮
-blockImmersive=switch,true,false,tag=选段按钮
-captionLang=select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=字幕翻译
-lyricLang=select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=歌词翻译
-debug=switch,false,true,tag=调试模式
+blockUpload = switch, true, false, tag = 隐藏上传按钮, desc = 用于隐藏YouTube底栏的上传按钮
+blockShorts = switch, true, false, tag = 隐藏Shorts按钮, desc = 用于隐藏YouTube底栏的Shorts按钮
+blockImmersive = switch, true, false, tag = 隐藏选段按钮, desc = 用于隐藏YouTube Music底栏的选段按钮
+captionLang = select, "zh-Hans", "zh-Hant", "ja", "ko", "en", "off", tag = 字幕翻译语言, desc = 选择翻译为何种语言字幕
+lyricLang = select, "zh-Hans", "zh-Hant", "ja", "ko", "en", "off", tag = 歌词翻译语言, desc = 选择翻译为何种语言字幕
+debug = switch, false, true, tag = 启用调试模式, desc = 此插件的调试模式
 [MitM]
 hostname=*.googlevideo.com, youtubei.googleapis.com
 [Rule]
