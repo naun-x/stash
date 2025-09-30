@@ -1,6 +1,6 @@
 #!name = 油管广告
 #!desc = 油管去广告
-#!author = Maasea[https://github.com/Maasea],VirgilClyne[https://github.com/VirgilClyne],Choler[https://github.com/Choler],DivineEngine[https://github.com/DivineEngine],app2smile[https://github.com/app2smile],ddgksf2013[https://github.com/ddgksf2013]
+#!author = Maasea[https://github.com/Maasea], VirgilClyne[https://github.com/VirgilClyne], Choler[https://github.com/Choler], DivineEngine[https://github.com/DivineEngine], app2smile[https://github.com/app2smile]
 #!icon = https://rx.nzvrn.com/x/youtube
 #!homepage = https://hub.kelee.one
 [Argument]
@@ -10,12 +10,12 @@ blockImmersive = switch,true,false,tag=选段按钮
 captionLang = select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=字幕翻译
 lyricLang = select,"zh-Hans","zh-Hant","ja","ko","en","off",tag=歌词翻译
 debug = switch,false,true,tag=调试模式
-[MitM]
+[MITM]
 hostname = *.googlevideo.com, youtubei.googleapis.com
 [Rule]
 AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,QUIC)),REJECT
 AND,((DOMAIN-SUFFIX,youtubei.googleapis.com),(PROTOCOL,QUIC)),REJECT
 [Rewrite]
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-200
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-200
 [Script]
-http-response ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$ script-path=https://xzx.nzvrn.com/https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js, requires-body=true, binary-body-mode=true, tag=油管广告, argument=[{blockUpload},{blockShorts},{blockImmersive},{captionLang},{lyricLang},{debug}]
+http-response ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$ script-path=https://kelee.one/Resource/JavaScript/YouTube/YouTube_remove_ads/YouTube_remove_ads_response.js, requires-body=true, binary-body-mode=true, tag=油管广告, argument="[{blockUpload},{blockShorts},{blockImmersive},{captionLang},{lyricLang},{debug}]"
