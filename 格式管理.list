@@ -1,8 +1,7 @@
 #!name=格式管理
 #!desc=转格式工具
 #!author=@小白脸 @xream @keywos @ckyb
-#!homepage=https://github.com/Script-Hub-Org/Script-Hub/tree/main
-#!openurl=https://script.hub
+#!homepage=https://script.hub
 #!icon=https://rx.nzvrn.com/x/script-hub
 #!select=随机图标, 启用, 禁用
 #!select=替换图标, 启用, 禁用
