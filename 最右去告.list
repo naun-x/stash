@@ -1,0 +1,23 @@
+#!name=最右去广
+#!desc=最右去除广告
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://rx.nzvrn.com/x/zuiyou
+#!openUrl=https://apps.apple.com/app/id942443472
+#!homepage=https://hub.kelee.one
+[Rule]
+DOMAIN,adapi.izuiyou.com,REJECT
+URL-REGEX,"^http:\/\/mercury-gateway\.ixiaochuan\.cn\/mercury\/v1\/ad\/",REJECT-DICT
+URL-REGEX,"^http:\/\/file-share\.izuiyou\.com\/octopus\/media\/templates\/search_home_page_(nv|nv_v2)\/search_home_page_nv",REJECT
+[MITM]
+hostname = api.izuiyou.com, zyfile.izuiyou.com, 203.107.1.1, 203.107.1.33, 203.107.1.66, 203.107.1.67, 203.107.1.97
+[Rewrite]
+^https?:\/\/api\.izuiyou\.com\/config\/get_banner - reject-dict
+^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
+^https:\/\/zyfile\.izuiyou\.com\/zyfile\/c2\/a0\/[a-z0-9-]+\.json - reject-dict
+^https?:\/\/203\.107\.1\.1/\d+/ss - reject
+^https?:\/\/203\.107\.1\.33/\d+/ss - reject
+^https?:\/\/203\.107\.1\.66/\d+/ss - reject
+^https?:\/\/203\.107\.1\.67/\d+/ss - reject
+^https?:\/\/203\.107\.1\.97/\d+/ss - reject
+^https?:\/\/2401:b180:2000:30::1c\/\d+\/d - reject
+^https?:\/\/2401:b180:2000:20::10\/\d+\/d - reject
