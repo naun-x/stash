@@ -2,7 +2,6 @@
 #!desc=网易去广告
 #!author=RuCu6[https://github.com/RuCu6], Keywos[https://github.com/Keywos]
 #!icon=https://rx.nzvrn.com/x/netease-cloudmusic
-#!openUrl=https://y.music.163.com
 #!homepage=https://hub.kelee.one
 [Argument]
 MY=switch,"false","true",tag=漫游标签, desc=
