@@ -1,8 +1,7 @@
 #!name=数据管理
 #!desc=储数据工具
-#!openUrl=https://boxjs.com
 #!author=chavyleung
-#!homepage=https://chavyleung.gitbook.io/boxjs
+#!homepage=https://boxjs.com
 #!icon=https://rx.nzvrn.com/x/boxjs
 [Rule]
 DOMAIN-SUFFIX,jsdelivr.net,PROXY
