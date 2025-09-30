@@ -8,6 +8,8 @@ DOMAIN,pinggai6.caixin.com
 DOMAIN,pinggai7.caixin.com
 DOMAIN,pinggai8.caixin.com
 DOMAIN,pinggai9.caixin.com
+DOMAIN,analytics.google.com
+DOMAIN,apilog-web.acfun.cn
 DOMAIN-SUFFIX,taboola.com
 DOMAIN-SUFFIX,realsrv.com
 DOMAIN-SUFFIX,sabavision.com
@@ -783,5 +785,3 @@ DOMAIN-SUFFIX,googlevads-cn.com
 DOMAIN-SUFFIX,mail-ads.google.com
 DOMAIN-SUFFIX,marketingplatform.google.com
 DOMAIN-SUFFIX,urchin.com
-DOMAIN,analytics.google.com
-DOMAIN,apilog-web.acfun.cn
