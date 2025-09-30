@@ -1,11 +1,11 @@
 #!name=订阅管理
-#!desc=订阅管理工具
+#!desc=转节点工具
 #!openUrl=https://sub.store
 #!author=Peng-YM
 #!homepage=https://github.com/sub-store-org/Sub-Store
 #!icon=https://rx.nzvrn.com/x/sub-store
-#!select = 节点缓存有效期,1分钟,5分钟,10分钟,30分钟,1小时,2小时,3小时,6小时,12小时,24小时,48小时,72小时,参数传入
-#!select = 响应缓存有效期,1分钟,5分钟,10分钟,30分钟,1小时,2小时,3小时,6小时,12小时,24小时,48小时,72小时,参数传入
+#!select = 节点缓存,1分钟,5分钟,10分钟,30分钟,1小时,2小时,3小时,6小时,12小时,24小时,48小时,72小时,参数传入
+#!select = 响应缓存,1分钟,5分钟,10分钟,30分钟,1小时,2小时,3小时,6小时,12小时,24小时,48小时,72小时,参数传入
 [Rule]
 DOMAIN,sub-store.vercel.app,PROXY
 [MITM]
