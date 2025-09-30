@@ -2,7 +2,6 @@
 #!desc=油管去广告
 #!author=Maasea[https://github.com/Maasea], VirgilClyne[https://github.com/VirgilClyne], Choler[https://github.com/Choler], DivineEngine[https://github.com/DivineEngine], app2smile[https://github.com/app2smile]
 #!icon=https://rx.nzvrn.com/x/youtube
-#!openUrl=https://youtube.com
 #!homepage=https://hub.kelee.one
 [Argument]
 blockUpload=switch,"false","true",tag=上传按钮, desc=用于隐藏YouTube底栏的上传按钮
