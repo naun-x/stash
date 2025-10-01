@@ -10,7 +10,7 @@ blockShorts = switch,false,true,tag = 短视按钮
 blockImmersive = switch,false,true,tag = 选段按钮
 captionLang = select,"zh-Hans","zh-Hant","ja","ko","en","off",tag = 字幕翻译
 lyricLang = select,"zh-Hans","zh-Hant","ja","ko","en","off",tag = 歌词翻译
-debug = switch,"false","true",tag = 调试模式
+debug = switch,false,true,tag = 调试模式
 
 [MITM]
 hostname = *.googlevideo.com,youtubei.googleapis.com
