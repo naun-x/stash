@@ -1,8 +1,12 @@
-#!name=拦截广告
-#!desc=平台去广告
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!icon=https://rx.nzvrn.com/x/ads
-#!homepage=https://hub.kelee.one
+#!name= 拦截广告
+#!desc= 平台去广告
+#!author= 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon= https://rx.nzvrn.com/x/ads
+#!homepage= https://hub.kelee.one
+
+[MITM]
+hostname = video-dsp.pddpic.com,t-dsp.pinduoduo.com,images.pinduoduo.com
+
 [Rule]
 AND,((DOMAIN-KEYWORD,tnc),(OR,((DOMAIN-SUFFIX,capcutapi.com),(DOMAIN-SUFFIX,zijieapi.com),(DOMAIN-SUFFIX,isnssdk.com),(DOMAIN-SUFFIX,toutiaoapi.com),(DOMAIN-SUFFIX,bytedance.com),(DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,sgsnssdk.com)))),DIRECT
 AND,((OR,((DOMAIN-KEYWORD,api-access),(DOMAIN-KEYWORD,log-api))),(DOMAIN-KEYWORD,pangolin-sdk-toutiao)),REJECT
@@ -201,8 +205,7 @@ DOMAIN-KEYWORD,trace.qq.com,REJECT
 DOMAIN-KEYWORD,trace.video.qq.com,REJECT
 DOMAIN-KEYWORD,ad.hunyuan.tencent.com,REJECT
 IP-CIDR,47.110.187.87/32,REJECT,no-resolve
-[MITM]
-hostname = video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
+
 [Rewrite]
 ^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ - reject
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_ - reject
