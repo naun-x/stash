@@ -9,7 +9,7 @@ showUpList = select,"auto","show","hide",tag = 动态显示
 purifyTopReplies = switch,true,false,tag = 评论广告
 purifyWebpage = switch,true,false,tag = 直播广告
 airborne = switch,true,false,tag = 空降助手
-logLevel = select,"off","error","warn,"info","debug",tag = 日志等级
+logLevel = select,"off","error","warn","info","debug",tag = 日志等级
 
 [MITM]
 hostname = grpc.biliapi.net,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,live.bilibili.com,line3-h5-mobile-api.biligame.com
