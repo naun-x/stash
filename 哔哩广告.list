@@ -5,7 +5,7 @@
 #!homepage= https://hub.kelee.one
 
 [Argument]
-showUpList = select,auto,show,hide,tag = 动态显示
+showUpList = select,"auto","show","hide",tag = 动态显示
 purifyTopReplies = switch,true,false,tag = 评论广告
 purifyWebpage = switch,true,false,tag = 直播广告
 airborne = switch,true,false,tag = 空降助手
