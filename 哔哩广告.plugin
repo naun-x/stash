@@ -1,8 +1,8 @@
-#!name= 哔哩广告
-#!desc= 哔哩去广告
-#!author= kokoryh[https://github.com/kokoryh]
-#!icon= https://rx.nzvrn.com/x/bilibili
-#!homepage= https://hub.kelee.one
+#!name = 哔哩广告
+#!desc = 哔哩去广告
+#!icon = https://rx.nzvrn.com/x/bilibili
+#!author = kokoryh[https://github.com/kokoryh]
+#!homepage = https://hub.kelee.one
 
 [Argument]
 showUpList = select,"auto","show","hide",tag = 动态显示
