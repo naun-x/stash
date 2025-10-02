@@ -1,6 +1,6 @@
 name: 解锁检测
 desc: 解锁检测
-category: 检测工具
+category: 解锁工具
 icon: https://rx.nzvrn.com/x/jiesuo
 tiles:
   - name: 智障-EAE
