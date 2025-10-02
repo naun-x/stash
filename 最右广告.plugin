@@ -1,8 +1,8 @@
-#!name= 最右广告
-#!desc= 最右去广告
-#!author= 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!icon= https://rx.nzvrn.com/x/zuiyou
-#!homepage= https://hub.kelee.one
+#!name = 最右广告
+#!desc = 最右去广告
+#!icon = https://rx.nzvrn.com/x/zuiyou
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!homepage = https://hub.kelee.one
 
 [MITM]
 hostname = api.izuiyou.com,zyfile.izuiyou.com,203.107.1.1,203.107.1.33,203.107.1.66,203.107.1.67,203.107.1.97
