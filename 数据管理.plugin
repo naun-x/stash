@@ -1,8 +1,8 @@
-#!name= 数据管理
-#!desc= 储数据工具
-#!author= chavyleung
-#!homepage= https://boxjs.com
-#!icon= https://rx.nzvrn.com/x/boxjs
+#!name = 数据管理
+#!desc = 储数据工具
+#!icon = https://rx.nzvrn.com/x/boxjs
+#!author = chavyleung
+#!homepage = https://boxjs.com
 
 [MITM]
 hostname = boxjs.com,boxjs.net,*.boxjs.com,*.boxjs.net
