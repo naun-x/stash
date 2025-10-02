@@ -1,8 +1,8 @@
-#!name = 拦截广告
-#!desc = 平台去广告
-#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!icon = https://rx.nzvrn.com/x/ads
-#!homepage = https://hub.kelee.one
+#!name= 拦截广告
+#!desc= 平台去广告
+#!author= 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon= https://rx.nzvrn.com/x/ads
+#!homepage= https://hub.kelee.one
 
 [MITM]
 hostname = video-dsp.pddpic.com,t-dsp.pinduoduo.com,images.pinduoduo.com
