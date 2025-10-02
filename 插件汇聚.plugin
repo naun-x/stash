@@ -1,0 +1,14 @@
+#!name = 插件仓库
+#!desc = 插件仓库
+#!author = Peng-YM[https://github.com/Peng-YM]
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://rx.nzvrn.com/x/loon
+
+[MitM]
+hostname = xn--ck8h.com
+
+[Rule]
+DOMAIN,loon-plugin.vercel.app,PROXY
+
+[Script]
+http-request ^https?:\/\/xn--ck8h\.com script-path = https://raw.githubusercontent.com/Loon0x00/Loon-Gallery/master/backend/gallery.js,requires-body = true,timeout = 120,tag = 插件仓库
