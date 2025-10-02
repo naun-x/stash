@@ -11,4 +11,4 @@ hostname = xn--ck8h.com
 DOMAIN,loon-plugin.vercel.app,PROXY
 
 [Script]
-http-request ^https?:\/\/xn--ck8h\.com script-path = https://raw.githubusercontent.com/Loon0x00/Loon-Gallery/master/backend/gallery.js,requires-body = true,timeout = 120,tag = 插件仓库
+http-request ^https?:\/\/xn--ck8h\.com script-path = https://xzx.nzvrn.com/https://raw.githubusercontent.com/Loon0x00/Loon-Gallery/master/backend/gallery.js,requires-body = true,timeout = 120,tag = 插件仓库
