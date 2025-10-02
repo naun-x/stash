@@ -1,5 +1,5 @@
-name: 微信去广告
-desc: 微信广告拦截
+name: 微信广告
+desc: 广告拦截
 category: 广告拦截
 icon: https://rx.nzvrn.com/x/weixin
 rules:
