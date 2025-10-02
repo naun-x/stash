@@ -1,8 +1,8 @@
-#!name= 百度广告
-#!desc= 百度去广告
-#!author= Keywos[https://github.com/Keywos],app2smile[https://github.com/app2smile],可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!icon= https://rx.nzvrn.com/x/baidu
-#!homepage= https://hub.kelee.one
+#!name = 百度广告
+#!desc = 百度去广告
+#!icon = https://rx.nzvrn.com/x/baidu
+#!author = Keywos[https://github.com/Keywos],app2smile[https://github.com/app2smile],可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!homepage = https://hub.kelee.one
 
 [MITM]
 hostname = m.baidu.com,www.baidu.com,pan.baidu.com,tiebac.baidu.com,tieba.baidu.com,imeres.baidu.com,mbd.baidu.com,mime.baidu.com,afd.baidu.com,newclient.map.baidu.com,yongche.baidu.com,ecom.map.baidu.com
