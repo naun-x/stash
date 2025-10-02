@@ -1,8 +1,8 @@
 #!name = 插件仓库
-#!desc = 插件仓库
+#!desc = 插件库工具
 #!author = Peng-YM[https://github.com/Peng-YM]
-#!homepage = https://🎈.com
 #!icon = https://rx.nzvrn.com/x/loon
+#!homepage = https://🎈.com
 
 [MitM]
 hostname = xn--ck8h.com
