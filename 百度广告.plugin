@@ -47,6 +47,6 @@ IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 ^https:\/\/maphotel\.baidu\.com\/hotel\/goextranet\/activity\/detail\? - reject-dict
 
 [Script]
-http-response ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9}) script-path=https://kelee.one/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js,requires-body = true,timeout = 20,tag = 搜索首页
-http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://kelee.one/Resource/JavaScript/Tieba/tieba-proto.js,requires-body = true,binary-body-mode = true,timeout = 10,tag = 数据处理
-http-response ^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)) script-path=https://kelee.one/Resource/JavaScript/Baidu_input_method/Baidu_input_method_remove_ads.js,requires-body = true,timeout = 20,tag = 输入广告
+http-response ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9}) script-path = https://kelee.one/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js,requires-body = true,timeout = 20,tag = 搜索首页
+http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path = https://kelee.one/Resource/JavaScript/Tieba/tieba-proto.js,requires-body = true,binary-body-mode = true,timeout = 10,tag = 数据处理
+http-response ^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)) script-path = https://kelee.one/Resource/JavaScript/Baidu_input_method/Baidu_input_method_remove_ads.js,requires-body = true,timeout = 20,tag = 输入广告
