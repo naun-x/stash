@@ -1,8 +1,8 @@
-#!name= 油管广告
-#!desc= 油管去广告
-#!author= Maasea[https://github.com/Maasea],VirgilClyne[https://github.com/VirgilClyne],Choler[https://github.com/Choler],DivineEngine[https://github.com/DivineEngine],app2smile[https://github.com/app2smile]
-#!icon= https://rx.nzvrn.com/x/youtube
-#!homepage= https://hub.kelee.one
+#!name = 油管广告
+#!desc = 油管去广告
+#!icon = https://rx.nzvrn.com/x/youtube
+#!author = Maasea[https://github.com/Maasea],VirgilClyne[https://github.com/VirgilClyne],Choler[https://github.com/Choler],DivineEngine[https://github.com/DivineEngine],app2smile[https://github.com/app2smile]
+#!homepage = https://hub.kelee.one
 
 [Argument]
 blockUpload = switch,true,false,tag = 上传按钮
