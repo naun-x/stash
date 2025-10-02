@@ -10,6 +10,7 @@
 hostname = sub.store
 
 [Rule]
+DOMAIN,ip-api.com,PROXY
 DOMAIN,sub-store.vercel.app,PROXY
 
 [Script]
