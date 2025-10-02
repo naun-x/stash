@@ -7,11 +7,10 @@
 #!select = 响应缓存,1分钟,5分钟,10分钟,30分钟,1小时,2小时,3小时,6小时,12小时,24小时,48小时,72小时,参数传入
 
 [MITM]
-hostname = sub.store
+hostname = sub.store,*.sub.store
 
 [Rule]
-DOMAIN,ip-api.com,PROXY
-DOMAIN,sub-store.vercel.app,PROXY
+DOMAIN,sub.store,PROXY
 
 [Script]
 http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path=https://xzx.nzvrn.com/https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body = true,timeout = 120,tag = 订阅核心
