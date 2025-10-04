@@ -1,4 +1,5 @@
 DOMAIN,manga.bilibili.com
+DOMAIN,upos-hz-mirrorakam.akamaized.net
 DOMAIN-SUFFIX,bilicomic.com
 DOMAIN-SUFFIX,bilicomics.com
 DOMAIN-SUFFIX,acg.tv
@@ -41,7 +42,6 @@ DOMAIN-SUFFIX,yo9.com
 DOMAIN-SUFFIX,bilibili.tv
 DOMAIN-SUFFIX,biliintl.com
 DOMAIN-SUFFIX,dreamcast.hk
-DOMAIN,upos-hz-mirrorakam.akamaized.net
 DOMAIN-SUFFIX,bilibiligame.cn
 DOMAIN-SUFFIX,bilibiligame.co
 DOMAIN-SUFFIX,bilibiligame.net
