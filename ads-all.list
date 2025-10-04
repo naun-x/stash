@@ -10,6 +10,13 @@ DOMAIN,pinggai8.caixin.com
 DOMAIN,pinggai9.caixin.com
 DOMAIN,analytics.google.com
 DOMAIN,apilog-web.acfun.cn
+DOMAIN,adeventtracker.spotify.com
+DOMAIN,adstudio-assets.scdn.co
+DOMAIN,bloodhound.spotify.com
+DOMAIN,log-sdk.gifshow.com
+DOMAIN,wlog.kuaishou.com
+DOMAIN,e8aeb8bbdbbd7.cdn.sohucs.com
+DOMAIN,643108e7617ef.cdn.sohucs.com
 DOMAIN-SUFFIX,taboola.com
 DOMAIN-SUFFIX,realsrv.com
 DOMAIN-SUFFIX,sabavision.com
@@ -354,9 +361,6 @@ DOMAIN-SUFFIX,microad.co.jp
 DOMAIN-SUFFIX,microad.jp
 DOMAIN-SUFFIX,socdm.com
 DOMAIN-SUFFIX,mopub.com
-DOMAIN,adeventtracker.spotify.com
-DOMAIN,adstudio-assets.scdn.co
-DOMAIN,bloodhound.spotify.com
 DOMAIN-SUFFIX,adbehavior.ximalaya.com
 DOMAIN-SUFFIX,adse.wsa.ximalaya.com
 DOMAIN-SUFFIX,adse.ximalaya.com
@@ -409,8 +413,6 @@ DOMAIN-SUFFIX,adkwai.com
 DOMAIN-SUFFIX,adukwai.com
 DOMAIN-SUFFIX,e.kuaishou.cn
 DOMAIN-SUFFIX,e.kuaishou.com
-DOMAIN,log-sdk.gifshow.com
-DOMAIN,wlog.kuaishou.com
 DOMAIN-SUFFIX,cdn.pocoiq.cn
 DOMAIN-SUFFIX,oct.pocoiq.cn
 DOMAIN-SUFFIX,emogi.com
@@ -438,8 +440,6 @@ DOMAIN-SUFFIX,theta.sogoucdn.com
 DOMAIN-SUFFIX,track.sohu.com
 DOMAIN-SUFFIX,uranus.sogou.com
 DOMAIN-SUFFIX,v2.reachmax.cn
-DOMAIN,e8aeb8bbdbbd7.cdn.sohucs.com
-DOMAIN,643108e7617ef.cdn.sohucs.com
 DOMAIN-SUFFIX,collector.xhamster.com
 DOMAIN-SUFFIX,actives.youku.com
 DOMAIN-SUFFIX,ad.api.3g.youku.com
