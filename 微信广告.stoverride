@@ -1,7 +1,7 @@
 name: 微信广告
 desc: 广告拦截
 category: 广告拦截
-icon: https://rx.nzvrn.com/x/weixin
+icon: https://rx.zxz.us.kg/x/weixin
 rules:
   - DOMAIN-KEYWORD,wechatpay,DIRECT
   - DOMAIN,epay.ahrcu.com,DIRECT
