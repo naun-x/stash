@@ -1,6 +1,6 @@
 #!name = 格式管理
 #!desc = 转格式工具
-#!icon = https://rx.nzvrn.com/x/script-hub
+#!icon = https://rx.zxz.us.kg/x/script-hub
 #!author = @小白脸 @xream @keywos @ckyb
 #!homepage = https://script.hub
 #!select = 随机图标,启用,禁用
@@ -20,7 +20,7 @@ hostname = script.hub,*.script.hub
 DOMAIN,scripthub.vercel.app,PROXY
 
 [Script]
-http-request ^https?:\/\/script\.hub\/($|edit\/|reload) script-path = https://xzx.nzvrn.com/https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js,timeout = 300,tag = 前端脚本
-http-request ^https?:\/\/script\.hub\/file\/_start_\/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module) script-path = https://xzx.nzvrn.com/https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js,timeout = 300,tag = 重写转换
-http-request ^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set script-path = https://xzx.nzvrn.com/https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js,timeout = 300,tag = 规则转换
-http-request ^https?:\/\/script\.hub\/convert\/ script-path = https://xzx.nzvrn.com/https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js,timeout = 300,tag = 脚本转换
+http-request ^https?:\/\/script\.hub\/($|edit\/|reload) script-path = https://cn.zxz.us.kg/https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js,timeout = 300,tag = 前端脚本
+http-request ^https?:\/\/script\.hub\/file\/_start_\/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module) script-path = https://cn.zxz.us.kg/https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js,timeout = 300,tag = 重写转换
+http-request ^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set script-path = https://cn.zxz.us.kg/https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js,timeout = 300,tag = 规则转换
+http-request ^https?:\/\/script\.hub\/convert\/ script-path = https://cn.zxz.us.kg/https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js,timeout = 300,tag = 脚本转换
