@@ -1,7 +1,7 @@
 name: 油管广告
 desc: 广告拦截
 category: 广告拦截
-icon: https://rx.nzvrn.com/x/youtube
+icon: https://rx.zxz.us.kg/x/youtube
 http:
   mitm:
     - '-redirector*.googlevideo.com'
