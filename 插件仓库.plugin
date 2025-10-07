@@ -1,6 +1,6 @@
 #!name = 插件仓库
 #!desc = 插件库工具
-#!icon = https://rx.nzvrn.com/x/loon
+#!icon = https://rx.zxz.us.kg/x/loon
 #!author = Peng-YM[https://github.com/Peng-YM]
 #!homepage = https://🎈.com
 
@@ -11,4 +11,4 @@ hostname = xn--ck8h.com
 DOMAIN,loon-plugin.vercel.app,PROXY
 
 [Script]
-http-request ^https?:\/\/xn--ck8h\.com script-path = https://xzx.nzvrn.com/https://raw.githubusercontent.com/Loon0x00/Loon-Gallery/master/backend/gallery.js,requires-body = true,timeout = 120,tag = 插件仓库
+http-request ^https?:\/\/xn--ck8h\.com script-path = https://cn.zxz.us.kg/https://raw.githubusercontent.com/Loon0x00/Loon-Gallery/master/backend/gallery.js,requires-body = true,timeout = 120,tag = 插件仓库
