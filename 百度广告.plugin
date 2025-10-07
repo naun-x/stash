@@ -1,6 +1,6 @@
 #!name = 百度广告
 #!desc = 百度去广告
-#!icon = https://rx.nzvrn.com/x/baidu
+#!icon = https://rx.zxz.us.kg/x/baidu
 #!author = Keywos[https://github.com/Keywos],app2smile[https://github.com/app2smile],可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage = https://hub.kelee.one
 
@@ -47,6 +47,6 @@ IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 ^https:\/\/maphotel\.baidu\.com\/hotel\/goextranet\/activity\/detail\? - reject-dict
 
 [Script]
-http-response ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9}) script-path = https://xzx.nzvrn.com/https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js,requires-body = true,timeout = 20,tag = 搜索首页
-http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path = https://xzx.nzvrn.com/https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js,requires-body = true,binary-body-mode = true,timeout = 10,tag = 数据处理
-http-response ^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)) script-path = https://xzx.nzvrn.com/https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Resource/JavaScript/Baidu_input_method/Baidu_input_method_remove_ads.js,requires-body = true,timeout = 20,tag = 输入广告
+http-response ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9}) script-path = https://cn.zxz.us.kg/https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js,requires-body = true,timeout = 20,tag = 搜索首页
+http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path = https://cn.zxz.us.kg/https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js,requires-body = true,binary-body-mode = true,timeout = 10,tag = 数据处理
+http-response ^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)) script-path = https://cn.zxz.us.kg/https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Resource/JavaScript/Baidu_input_method/Baidu_input_method_remove_ads.js,requires-body = true,timeout = 20,tag = 输入广告
