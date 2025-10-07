@@ -1,7 +1,7 @@
 name: 数据管理
 desc: 脚本数据
 category: 管理工具
-icon: https://rx.nzvrn.com/x/boxjs
+icon: https://rx.zxz.us.kg/x/boxjs
 http:
   force-http-engine:
     - 'boxjs.com'
