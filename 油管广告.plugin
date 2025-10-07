@@ -1,6 +1,6 @@
 #!name = 油管广告
 #!desc = 油管去广告
-#!icon = https://rx.nzvrn.com/x/youtube
+#!icon = https://rx.zxz.us.kg/x/youtube
 #!author = Maasea[https://github.com/Maasea],VirgilClyne[https://github.com/VirgilClyne],Choler[https://github.com/Choler],DivineEngine[https://github.com/DivineEngine],app2smile[https://github.com/app2smile]
 #!homepage = https://hub.kelee.one
 
@@ -23,4 +23,4 @@ AND,((DOMAIN-SUFFIX,youtubei.googleapis.com),(PROTOCOL,QUIC)),REJECT
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-200
 
 [Script]
-http-response ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$ script-path = https://xzx.nzvrn.com/https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js,requires-body = true,binary-body-mode = true,tag = 油管广告,argument = [{blockUpload},{blockShorts},{blockImmersive},{captionLang},{lyricLang},{debug}]
+http-response ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$ script-path = https://cn.zxz.us.kg/https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js,requires-body = true,binary-body-mode = true,tag = 油管广告,argument = [{blockUpload},{blockShorts},{blockImmersive},{captionLang},{lyricLang},{debug}]
