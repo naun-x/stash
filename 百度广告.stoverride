@@ -1,7 +1,7 @@
 name: 百度广告
 desc: 广告拦截
 category: 广告拦截
-icon: https://rx.nzvrn.com/x/baidu
+icon: https://rx.zxz.us.kg/x/baidu
 rules:
   - DOMAIN,180.76.76.200,REJECT
   - IP-CIDR,180.76.76.200/32,REJECT,no-resolve
