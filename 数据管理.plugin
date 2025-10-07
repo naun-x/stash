@@ -1,6 +1,6 @@
 #!name = 数据管理
 #!desc = 储数据工具
-#!icon = https://rx.nzvrn.com/x/boxjs
+#!icon = https://rx.zxz.us.kg/x/boxjs
 #!author = chavyleung
 #!homepage = https://boxjs.com
 
@@ -11,4 +11,4 @@ hostname = boxjs.com,boxjs.net,*.boxjs.com,*.boxjs.net
 DOMAIN-SUFFIX,jsdelivr.net,PROXY
 
 [Script]
-http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path = https://xzx.nzvrn.com/https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js,requires-body = true,timeout = 120,tag = 数据管理
+http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path = https://cn.zxz.us.kg/https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js,requires-body = true,timeout = 120,tag = 数据管理
