@@ -1,7 +1,7 @@
 name: 扣音广告
 desc: 广告拦截
 category: 广告拦截
-icon: https://rx.nzvrn.com/x/qqmusic
+icon: https://rx.zxz.us.kg/x/qqmusic
 rules:
   - DOMAIN,adstats.tencentmusic.com,REJECT
   - DOMAIN,ad.tencentmusic.com,REJECT
